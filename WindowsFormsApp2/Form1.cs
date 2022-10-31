@@ -198,6 +198,14 @@ namespace WindowsFormsApp2
 
             }
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer.Enabled = true;
+            serialPort1.DiscardInBuffer();
+            serialPort1.DiscardOutBuffer();
+            dataOUT = "mon \n";
+            serialPort1.WriteLine(dataOUT);
+        }
 
         private void chBoxDTR_CheckedChanged(object sender, EventArgs e)
         {
@@ -360,10 +368,7 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            timer.Enabled=true;
-        }
+     
 
         private void chBoxОбновлятьВсегда_CheckedChanged(object sender, EventArgs e)//alw update
         {
