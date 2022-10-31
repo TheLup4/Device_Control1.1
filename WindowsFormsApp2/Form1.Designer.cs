@@ -93,20 +93,20 @@ namespace WindowsFormsApp2
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxCOM = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartILD = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartITEC = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabPage2.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -120,6 +120,7 @@ namespace WindowsFormsApp2
             this.groupBox8.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
@@ -127,7 +128,6 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.chartILD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartITEC)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -648,6 +648,28 @@ namespace WindowsFormsApp2
             this.tabPage1.Text = "ГРАФИК";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Controls.Add(this.button1);
+            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.comboBox2);
+            this.groupBox6.Controls.Add(this.button5);
+            this.groupBox6.Location = new System.Drawing.Point(10, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(253, 291);
+            this.groupBox6.TabIndex = 34;
+            this.groupBox6.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(49, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 17);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Настройка измерений";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(34, 21);
@@ -657,6 +679,31 @@ namespace WindowsFormsApp2
             this.button1.Text = "Начать измерения";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(68, 203);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(117, 24);
+            this.textBox1.TabIndex = 22;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(34, 173);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(184, 24);
+            this.comboBox2.TabIndex = 23;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(34, 233);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(184, 52);
+            this.button5.TabIndex = 25;
+            this.button5.Text = "Принять изменения";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // chart6
             // 
@@ -765,40 +812,6 @@ namespace WindowsFormsApp2
             this.chartITEC.TabIndex = 27;
             this.chartITEC.Text = "chartITEC";
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(34, 233);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(184, 52);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "Принять изменения";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 17);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Настройка измерений";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(34, 173);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(184, 24);
-            this.comboBox2.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(68, 203);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 24);
-            this.textBox1.TabIndex = 22;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -817,19 +830,6 @@ namespace WindowsFormsApp2
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1500, 800);
             this.tabControl1.TabIndex = 0;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label3);
-            this.groupBox6.Controls.Add(this.button1);
-            this.groupBox6.Controls.Add(this.textBox1);
-            this.groupBox6.Controls.Add(this.comboBox2);
-            this.groupBox6.Controls.Add(this.button5);
-            this.groupBox6.Location = new System.Drawing.Point(10, 6);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(253, 291);
-            this.groupBox6.TabIndex = 34;
-            this.groupBox6.TabStop = false;
             // 
             // Form1
             // 
@@ -863,6 +863,8 @@ namespace WindowsFormsApp2
             this.groupBox1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
@@ -870,8 +872,6 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.chartILD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartITEC)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }

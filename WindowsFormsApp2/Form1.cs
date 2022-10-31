@@ -69,12 +69,6 @@ namespace WindowsFormsApp2
            ClientSize = new Size(1125, 550);
             KeyPreview = true;
            
-            comboBox1.Items.Add("I(TEC)");
-            comboBox1.Items.Add("I(LD)");
-            comboBox1.Items.Add("P(BFM)");
-            comboBox1.Items.Add("P(ACE)");
-            comboBox1.Items.Add("THERM");
-            comboBox1.Items.Add("LAMBDA");
             chartITEC.ChartAreas[0].AxisX.Title = "Time, s";
             chartITEC.ChartAreas[0].AxisX.Minimum = 0;
             string path1 = @"C:\Files\RegData.txt";
@@ -105,7 +99,6 @@ namespace WindowsFormsApp2
             btnОтправитьДанные.Enabled = true;
             chBoxWrite.Checked = true;
             chBoxWriteLine.Checked = false;
-            button6.Enabled = false;
             sendWidth = "Write";
 
             chBoxОбновлятьВсегда.Checked = false;
@@ -321,7 +314,7 @@ namespace WindowsFormsApp2
 
         }
 
-
+        
 
         private void timer_Tick(object sender, EventArgs e)
         {
