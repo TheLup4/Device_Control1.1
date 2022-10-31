@@ -1,0 +1,10 @@
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\TerminalKT.csproj.AssemblyReference.cache
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\TerminalKT.csproj.GenerateResource.cache
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\TerminalKT.csproj.CoreCompileInputs.cache
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb

@@ -1,0 +1,92 @@
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Администратор\source\repos\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\Администратор\Desktop\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\kt012\OneDrive\Desktop\курсы c#\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Администратор\Downloads\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe.licenses
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.manifest
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.application
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe.manifest
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.application
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Data.Desktop.v21.1.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Data.v21.1.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Printing.v21.1.Core.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Utils.v21.1.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Pdf.v21.1.Core.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Pdf.v21.1.Drawing.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Data.Desktop.v21.1.xml
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Data.v21.1.xml
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Printing.v21.1.Core.xml
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Utils.v21.1.xml
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Pdf.v21.1.Core.xml
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\DevExpress.Pdf.v21.1.Drawing.xml
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\de\DevExpress.Data.v21.1.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\es\DevExpress.Data.v21.1.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\ja\DevExpress.Data.v21.1.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\ru\DevExpress.Data.v21.1.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\de\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\es\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\ja\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\ru\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\de\DevExpress.Utils.v21.1.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\es\DevExpress.Utils.v21.1.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\ja\DevExpress.Utils.v21.1.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\ru\DevExpress.Utils.v21.1.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\de\DevExpress.Pdf.v21.1.Core.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\es\DevExpress.Pdf.v21.1.Core.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\ja\DevExpress.Pdf.v21.1.Core.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\bin\Debug\ru\DevExpress.Pdf.v21.1.Core.resources.dll
+C:\Files\Project1-20220628T044233Z-001-20220629T091600Z-001\Project1-20220628T044233Z-001\Project1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
