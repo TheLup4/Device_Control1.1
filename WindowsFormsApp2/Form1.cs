@@ -29,50 +29,48 @@ namespace WindowsFormsApp2
             
             //Красивое движение графиков (Выбор и развертка)
 
-           /* chartITEC.Click+= async (s, a) =>
+            chart5.Click+= async (s, a) =>
                 {
-                    while (!expectationChart && chartITEC.Location.X > 5 && chartITEC.Location.Y>5)
+                    while (!expectationChart && chart5.Location.X > 5 && chart5.Location.Y>5)
                     {
 
-                        if (chartPosX==0)
+                        if (chartPosX == 0 && chartPosY == 0)
                         {
-                            chartPosX = chartITEC.Location.X;
-                            chartPosY = chartITEC.Location.Y;
+                            chartPosX = chart5.Location.X;
+                            chartPosY = chart5.Location.Y;
 
                         }
                         await Task.Delay(1);
                         expectationChart = true;
-                        chartITEC.Location = new Point(chartITEC.Location.X - chartITEC.Location.X/20-1, chartITEC.Location.Y - chartITEC.Location.Y / 10 - 1);
+                        chart5.Location = new Point(chart5.Location.X - chart5.Location.X/20-1, chart5.Location.Y - chart5.Location.Y / 10 - 1);
                         
                         expectationChart = false;
                         
                     }
-                    chartITEC.Size = new Size(Width = 850, Height = 380);
+                    chart5.BringToFront();
+                    chart5.Size = new Size(Width = 850, Height = 380);
                 };
-            chartITEC.DoubleClick += async (s, a) =>
+            chart5.DoubleClick += async (s, a) =>
                 {
-                    chartITEC.Size = new Size(Width = 200, Height = 100);
-                    while (!expectationChart && chartITEC.Location.X <= chartPosX&& chartITEC.Location.Y <= chartPosY)
+                    chart5.Size = new Size(Width = 200, Height = 100);
+                    while (!expectationChart && chart5.Location.X <= chartPosX&& chart5.Location.Y <= chartPosY)
                     {
                         expectationChart = true;
                         await Task.Delay(1);
-                        chartITEC.Location = new Point(chartITEC.Location.X+(chartPosX- chartITEC.Location.X)/10+1, chartITEC.Location.Y + (chartPosY - chartITEC.Location.Y) / 10 + 1);
+                        chart5.Location = new Point(chart5.Location.X+(chartPosX- chart5.Location.X)/10+1, chart5.Location.Y + (chartPosY - chart5.Location.Y) / 10 + 1);
                         expectationChart = false;
                     }
 
                     
                 };
-            //конец*/
+            //конец
         }
         private void Form1_Load(object sender, EventArgs e)
         {
            ClientSize = new Size(1125, 550);
             KeyPreview = true;
-           
-            chartITEC.ChartAreas[0].AxisX.Title = "Time, s";
-            chartITEC.ChartAreas[0].AxisX.Minimum = 0;
-            string path1 = @"C:\Files\RegData.txt";
-            string path2 = @"C:\Files\RegNames.txt";
+
+            
 
             GetRegs(regList);
             foreach (string reg in regList)
@@ -106,37 +104,49 @@ namespace WindowsFormsApp2
 
             //Настройка графиков
             timer.Enabled = false;
-            chartITEC.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chartITEC.ChartAreas[0].AxisX.Title = "Time, s";
+            chartITEC.ChartAreas[0].AxisX.Minimum = 0;
+            chartITEC.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
             chartITEC.Series[0].XValueType = ChartValueType.DateTime;
             chartITEC.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
             chartITEC.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             chartITEC.ChartAreas[0].AxisX.Interval = 5;
 
-           chartILD.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chartILD.ChartAreas[0].AxisX.Title = "Time, s";
+            chartILD.ChartAreas[0].AxisX.Minimum = 0;
+            chartILD.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
             chartILD.Series[0].XValueType = ChartValueType.DateTime;
             chartILD.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
             chartILD.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             chartILD.ChartAreas[0].AxisX.Interval = 5;
 
-            chart3.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chart3.ChartAreas[0].AxisX.Title = "Time, s";
+            chart3.ChartAreas[0].AxisX.Minimum = 0;
+            chart3.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
             chart3.Series[0].XValueType = ChartValueType.DateTime;
             chart3.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
             chart3.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             chart3.ChartAreas[0].AxisX.Interval = 5;
 
-            chart4.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chart4.ChartAreas[0].AxisX.Title = "Time, s";
+            chart4.ChartAreas[0].AxisX.Minimum = 0;
+            chart4.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
             chart4.Series[0].XValueType = ChartValueType.DateTime;
             chart4.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
             chart4.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             chart4.ChartAreas[0].AxisX.Interval = 5;
 
-            chart5.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chart5.ChartAreas[0].AxisX.Title = "Time, s";
+            chart5.ChartAreas[0].AxisX.Minimum = 0;
+            chart5.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
             chart5.Series[0].XValueType = ChartValueType.DateTime;
             chart5.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
             chart5.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             chart5.ChartAreas[0].AxisX.Interval = 5;
 
-            chart6.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chart6.ChartAreas[0].AxisX.Title = "Time, s";
+            chart6.ChartAreas[0].AxisX.Minimum = 0;
+            chart6.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
             chart6.Series[0].XValueType = ChartValueType.DateTime;
             chart6.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
             chart6.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
@@ -182,8 +192,7 @@ namespace WindowsFormsApp2
 
         private void btnОтправитьДанные_Click(object sender, EventArgs e)
         {
-            serialPort1.DiscardInBuffer();
-            serialPort1.DiscardOutBuffer();
+            
             if (serialPort1.IsOpen)
             {
                 dataOUT = txtBoxВводДанных.Text;
@@ -195,20 +204,22 @@ namespace WindowsFormsApp2
                 {
                     serialPort1.Write(dataOUT);
                 }
-
+                
+                
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
             timer.Enabled = true;
-            serialPort1.DiscardInBuffer();
-            serialPort1.DiscardOutBuffer();
-            dataOUT = "mon \n";
+ 
+            
+            dataOUT = "mon \r\n";
             serialPort1.WriteLine(dataOUT);
         }
 
         private void chBoxDTR_CheckedChanged(object sender, EventArgs e)
         {
+            serialPort1.DiscardInBuffer();
             if (chBoxDTR.Checked)
             {
                 serialPort1.DtrEnable = true;
@@ -219,7 +230,7 @@ namespace WindowsFormsApp2
 
         private void chBoxRTS_CheckedChanged(object sender, EventArgs e)
         {
-
+            serialPort1.DiscardInBuffer();
             if (chBoxRTS.Checked)
             {
                 serialPort1.RtsEnable = true;
@@ -283,8 +294,17 @@ namespace WindowsFormsApp2
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            dataIn = serialPort1.ReadLine();
-            this.Invoke(new EventHandler(ShowData));
+            try
+            {
+                dataIn = serialPort1.ReadLine();
+                this.Invoke(new EventHandler(ShowData));
+            }
+            catch (Exception)
+            {
+
+                
+            }
+           
         }
         private List<double> ITEC = new List<double>();
         private List<double> ILD= new List<double>();
