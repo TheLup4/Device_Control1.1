@@ -73,12 +73,6 @@ namespace WindowsFormsApp2
             this.btnОтправитьДанные = new System.Windows.Forms.Button();
             this.btnОчиститьОкноВвода = new System.Windows.Forms.Button();
             this.txtBoxВводДанных = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.lblСтатусПорта = new System.Windows.Forms.Label();
-            this.progrОткрытие = new System.Windows.Forms.ProgressBar();
-            this.btnЗакрытьПорт = new System.Windows.Forms.Button();
-            this.btnОткрытьПорт = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chBoxRTS = new System.Windows.Forms.CheckBox();
             this.chBoxDTR = new System.Windows.Forms.CheckBox();
@@ -90,9 +84,9 @@ namespace WindowsFormsApp2
             this.comboBoxDataBits = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxBaud = new System.Windows.Forms.ComboBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxCOM = new System.Windows.Forms.ComboBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -107,6 +101,12 @@ namespace WindowsFormsApp2
             this.chartITEC = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lblСтатусПорта = new System.Windows.Forms.Label();
+            this.progrОткрытие = new System.Windows.Forms.ProgressBar();
+            this.btnЗакрытьПорт = new System.Windows.Forms.Button();
+            this.btnОткрытьПорт = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -116,8 +116,6 @@ namespace WindowsFormsApp2
             this.groupBox4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -128,6 +126,8 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.chartILD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartITEC)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -143,7 +143,6 @@ namespace WindowsFormsApp2
             // 
             this.tabPage2.Controls.Add(this.groupBox9);
             this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -406,72 +405,6 @@ namespace WindowsFormsApp2
             this.txtBoxВводДанных.TabIndex = 12;
             this.txtBoxВводДанных.TextChanged += new System.EventHandler(this.txtBoxВводДанных_TextChanged);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox8);
-            this.groupBox2.Controls.Add(this.progrОткрытие);
-            this.groupBox2.Controls.Add(this.btnЗакрытьПорт);
-            this.groupBox2.Controls.Add(this.btnОткрытьПорт);
-            this.groupBox2.Location = new System.Drawing.Point(3, 281);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(285, 146);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.lblСтатусПорта);
-            this.groupBox8.Location = new System.Drawing.Point(96, 15);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(151, 79);
-            this.groupBox8.TabIndex = 14;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "COM Port Status";
-            // 
-            // lblСтатусПорта
-            // 
-            this.lblСтатусПорта.AutoSize = true;
-            this.lblСтатусПорта.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblСтатусПорта.Location = new System.Drawing.Point(43, 33);
-            this.lblСтатусПорта.Name = "lblСтатусПорта";
-            this.lblСтатусПорта.Size = new System.Drawing.Size(52, 25);
-            this.lblСтатусПорта.TabIndex = 0;
-            this.lblСтатусПорта.Text = "OFF";
-            // 
-            // progrОткрытие
-            // 
-            this.progrОткрытие.Location = new System.Drawing.Point(15, 100);
-            this.progrОткрытие.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.progrОткрытие.Name = "progrОткрытие";
-            this.progrОткрытие.Size = new System.Drawing.Size(245, 23);
-            this.progrОткрытие.TabIndex = 2;
-            // 
-            // btnЗакрытьПорт
-            // 
-            this.btnЗакрытьПорт.Location = new System.Drawing.Point(15, 58);
-            this.btnЗакрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnЗакрытьПорт.Name = "btnЗакрытьПорт";
-            this.btnЗакрытьПорт.Size = new System.Drawing.Size(75, 36);
-            this.btnЗакрытьПорт.TabIndex = 1;
-            this.btnЗакрытьПорт.Text = "Close";
-            this.btnЗакрытьПорт.UseVisualStyleBackColor = true;
-            this.btnЗакрытьПорт.Click += new System.EventHandler(this.btnЗакрытьПорт_Click);
-            // 
-            // btnОткрытьПорт
-            // 
-            this.btnОткрытьПорт.Location = new System.Drawing.Point(15, 15);
-            this.btnОткрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnОткрытьПорт.Name = "btnОткрытьПорт";
-            this.btnОткрытьПорт.Size = new System.Drawing.Size(75, 37);
-            this.btnОткрытьПорт.TabIndex = 0;
-            this.btnОткрытьПорт.Text = "Open";
-            this.btnОткрытьПорт.UseVisualStyleBackColor = true;
-            this.btnОткрытьПорт.Click += new System.EventHandler(this.btnОткрытьПорт_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.chBoxRTS);
@@ -484,8 +417,6 @@ namespace WindowsFormsApp2
             this.groupBox1.Controls.Add(this.comboBoxDataBits);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.comboBoxBaud);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBoxCOM);
             this.groupBox1.Location = new System.Drawing.Point(3, 5);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -612,26 +543,11 @@ namespace WindowsFormsApp2
             this.comboBoxBaud.TabIndex = 2;
             this.comboBoxBaud.Text = "115200";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 32);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 17);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Com Port";
-            // 
-            // comboBoxCOM
-            // 
-            this.comboBoxCOM.FormattingEnabled = true;
-            this.comboBoxCOM.Location = new System.Drawing.Point(93, 30);
-            this.comboBoxCOM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxCOM.Name = "comboBoxCOM";
-            this.comboBoxCOM.Size = new System.Drawing.Size(167, 24);
-            this.comboBoxCOM.TabIndex = 0;
-            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.comboBoxCOM);
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.chart6);
             this.tabPage1.Controls.Add(this.chart5);
@@ -647,6 +563,24 @@ namespace WindowsFormsApp2
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ГРАФИК";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 300);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 17);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Com Port";
+            // 
+            // comboBoxCOM
+            // 
+            this.comboBoxCOM.FormattingEnabled = true;
+            this.comboBoxCOM.Location = new System.Drawing.Point(91, 297);
+            this.comboBoxCOM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCOM.Name = "comboBoxCOM";
+            this.comboBoxCOM.Size = new System.Drawing.Size(167, 24);
+            this.comboBoxCOM.TabIndex = 35;
             // 
             // groupBox6
             // 
@@ -711,7 +645,7 @@ namespace WindowsFormsApp2
             this.chart6.ChartAreas.Add(chartArea7);
             legend7.Name = "Legend1";
             this.chart6.Legends.Add(legend7);
-            this.chart6.Location = new System.Drawing.Point(1044, 243);
+            this.chart6.Location = new System.Drawing.Point(1082, 243);
             this.chart6.Name = "chart6";
             series7.ChartArea = "ChartArea1";
             series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -729,7 +663,7 @@ namespace WindowsFormsApp2
             this.chart5.ChartAreas.Add(chartArea8);
             legend8.Name = "Legend1";
             this.chart5.Legends.Add(legend8);
-            this.chart5.Location = new System.Drawing.Point(645, 243);
+            this.chart5.Location = new System.Drawing.Point(683, 243);
             this.chart5.Name = "chart5";
             series8.ChartArea = "ChartArea1";
             series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -747,7 +681,7 @@ namespace WindowsFormsApp2
             this.chart4.ChartAreas.Add(chartArea9);
             legend9.Name = "Legend1";
             this.chart4.Legends.Add(legend9);
-            this.chart4.Location = new System.Drawing.Point(246, 243);
+            this.chart4.Location = new System.Drawing.Point(284, 243);
             this.chart4.Name = "chart4";
             series9.ChartArea = "ChartArea1";
             series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -765,7 +699,7 @@ namespace WindowsFormsApp2
             this.chart3.ChartAreas.Add(chartArea10);
             legend10.Name = "Legend1";
             this.chart3.Legends.Add(legend10);
-            this.chart3.Location = new System.Drawing.Point(1044, 6);
+            this.chart3.Location = new System.Drawing.Point(1082, 6);
             this.chart3.Name = "chart3";
             series10.ChartArea = "ChartArea1";
             series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -783,7 +717,7 @@ namespace WindowsFormsApp2
             this.chartILD.ChartAreas.Add(chartArea11);
             legend11.Name = "Legend1";
             this.chartILD.Legends.Add(legend11);
-            this.chartILD.Location = new System.Drawing.Point(645, 6);
+            this.chartILD.Location = new System.Drawing.Point(683, 6);
             this.chartILD.Name = "chartILD";
             series11.ChartArea = "ChartArea1";
             series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -801,7 +735,7 @@ namespace WindowsFormsApp2
             this.chartITEC.ChartAreas.Add(chartArea12);
             legend12.Name = "Legend1";
             this.chartITEC.Legends.Add(legend12);
-            this.chartITEC.Location = new System.Drawing.Point(246, 6);
+            this.chartITEC.Location = new System.Drawing.Point(284, 6);
             this.chartITEC.Name = "chartITEC";
             series12.ChartArea = "ChartArea1";
             series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -831,6 +765,72 @@ namespace WindowsFormsApp2
             this.tabControl1.Size = new System.Drawing.Size(1500, 800);
             this.tabControl1.TabIndex = 0;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox8);
+            this.groupBox2.Controls.Add(this.progrОткрытие);
+            this.groupBox2.Controls.Add(this.btnЗакрытьПорт);
+            this.groupBox2.Controls.Add(this.btnОткрытьПорт);
+            this.groupBox2.Location = new System.Drawing.Point(6, 325);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(285, 146);
+            this.groupBox2.TabIndex = 37;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lblСтатусПорта);
+            this.groupBox8.Location = new System.Drawing.Point(96, 15);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Size = new System.Drawing.Size(151, 79);
+            this.groupBox8.TabIndex = 14;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "COM Port Status";
+            // 
+            // lblСтатусПорта
+            // 
+            this.lblСтатусПорта.AutoSize = true;
+            this.lblСтатусПорта.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblСтатусПорта.Location = new System.Drawing.Point(43, 33);
+            this.lblСтатусПорта.Name = "lblСтатусПорта";
+            this.lblСтатусПорта.Size = new System.Drawing.Size(52, 25);
+            this.lblСтатусПорта.TabIndex = 0;
+            this.lblСтатусПорта.Text = "OFF";
+            // 
+            // progrОткрытие
+            // 
+            this.progrОткрытие.Location = new System.Drawing.Point(15, 100);
+            this.progrОткрытие.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.progrОткрытие.Name = "progrОткрытие";
+            this.progrОткрытие.Size = new System.Drawing.Size(245, 23);
+            this.progrОткрытие.TabIndex = 2;
+            // 
+            // btnЗакрытьПорт
+            // 
+            this.btnЗакрытьПорт.Location = new System.Drawing.Point(15, 58);
+            this.btnЗакрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnЗакрытьПорт.Name = "btnЗакрытьПорт";
+            this.btnЗакрытьПорт.Size = new System.Drawing.Size(75, 36);
+            this.btnЗакрытьПорт.TabIndex = 1;
+            this.btnЗакрытьПорт.Text = "Close";
+            this.btnЗакрытьПорт.UseVisualStyleBackColor = true;
+            this.btnЗакрытьПорт.Click += new System.EventHandler(this.btnЗакрытьПорт_Click);
+            // 
+            // btnОткрытьПорт
+            // 
+            this.btnОткрытьПорт.Location = new System.Drawing.Point(15, 15);
+            this.btnОткрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnОткрытьПорт.Name = "btnОткрытьПорт";
+            this.btnОткрытьПорт.Size = new System.Drawing.Size(75, 37);
+            this.btnОткрытьПорт.TabIndex = 0;
+            this.btnОткрытьПорт.Text = "Open";
+            this.btnОткрытьПорт.UseVisualStyleBackColor = true;
+            this.btnОткрытьПорт.Click += new System.EventHandler(this.btnОткрытьПорт_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -856,9 +856,6 @@ namespace WindowsFormsApp2
             this.groupBox7.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
@@ -872,6 +869,9 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.chartILD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartITEC)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -902,12 +902,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button btnОтправитьДанные;
         private System.Windows.Forms.Button btnОчиститьОкноВвода;
         private System.Windows.Forms.TextBox txtBoxВводДанных;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label lblСтатусПорта;
-        private System.Windows.Forms.ProgressBar progrОткрытие;
-        private System.Windows.Forms.Button btnЗакрытьПорт;
-        private System.Windows.Forms.Button btnОткрытьПорт;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chBoxRTS;
         private System.Windows.Forms.CheckBox chBoxDTR;
@@ -919,8 +913,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ComboBox comboBoxDataBits;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxBaud;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBoxCOM;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartITEC;
         private System.Windows.Forms.Button button5;
@@ -936,6 +928,14 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataVisualization.Charting.Chart chartILD;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxCOM;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label lblСтатусПорта;
+        private System.Windows.Forms.ProgressBar progrОткрытие;
+        private System.Windows.Forms.Button btnЗакрытьПорт;
+        private System.Windows.Forms.Button btnОткрытьПорт;
     }
 }
 
