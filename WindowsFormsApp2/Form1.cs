@@ -104,13 +104,43 @@ namespace WindowsFormsApp2
             chBoxОбновлятьВсегда.Checked = false;
             chBoxДобавлятьНовыеДанные.Checked = true;
 
-            //Настройка графика 1
+            //Настройка графиков
             timer.Enabled = false;
             chartITEC.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
             chartITEC.Series[0].XValueType = ChartValueType.DateTime;
             chartITEC.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
             chartITEC.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
             chartITEC.ChartAreas[0].AxisX.Interval = 5;
+
+           chartILD.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chartILD.Series[0].XValueType = ChartValueType.DateTime;
+            chartILD.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
+            chartILD.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+            chartILD.ChartAreas[0].AxisX.Interval = 5;
+
+            chart3.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chart3.Series[0].XValueType = ChartValueType.DateTime;
+            chart3.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
+            chart3.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+            chart3.ChartAreas[0].AxisX.Interval = 5;
+
+            chart4.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chart4.Series[0].XValueType = ChartValueType.DateTime;
+            chart4.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
+            chart4.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+            chart4.ChartAreas[0].AxisX.Interval = 5;
+
+            chart5.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chart5.Series[0].XValueType = ChartValueType.DateTime;
+            chart5.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
+            chart5.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+            chart5.ChartAreas[0].AxisX.Interval = 5;
+
+            chart6.ChartAreas[0].AxisX.LabelStyle.Format = "H:mm:ss";
+            chart6.Series[0].XValueType = ChartValueType.DateTime;
+            chart6.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
+            chart6.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+            chart6.ChartAreas[0].AxisX.Interval = 5;
         }
         //СТраница терминала
         private void btnОткрытьПорт_Click(object sender, EventArgs e)
