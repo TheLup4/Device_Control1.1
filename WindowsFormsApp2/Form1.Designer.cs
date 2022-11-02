@@ -30,24 +30,24 @@ namespace WindowsFormsApp2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -85,6 +85,12 @@ namespace WindowsFormsApp2
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxBaud = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lblСтатусПорта = new System.Windows.Forms.Label();
+            this.progrОткрытие = new System.Windows.Forms.ProgressBar();
+            this.btnЗакрытьПорт = new System.Windows.Forms.Button();
+            this.btnОткрытьПорт = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxCOM = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -101,12 +107,6 @@ namespace WindowsFormsApp2
             this.chartITEC = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.lblСтатусПорта = new System.Windows.Forms.Label();
-            this.progrОткрытие = new System.Windows.Forms.ProgressBar();
-            this.btnЗакрытьПорт = new System.Windows.Forms.Button();
-            this.btnОткрытьПорт = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -118,6 +118,8 @@ namespace WindowsFormsApp2
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
@@ -126,8 +128,6 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.chartILD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartITEC)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -403,7 +403,6 @@ namespace WindowsFormsApp2
             this.txtBoxВводДанных.Name = "txtBoxВводДанных";
             this.txtBoxВводДанных.Size = new System.Drawing.Size(479, 154);
             this.txtBoxВводДанных.TabIndex = 12;
-            this.txtBoxВводДанных.TextChanged += new System.EventHandler(this.txtBoxВводДанных_TextChanged);
             // 
             // groupBox1
             // 
@@ -564,6 +563,72 @@ namespace WindowsFormsApp2
             this.tabPage1.Text = "ГРАФИК";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox8);
+            this.groupBox2.Controls.Add(this.progrОткрытие);
+            this.groupBox2.Controls.Add(this.btnЗакрытьПорт);
+            this.groupBox2.Controls.Add(this.btnОткрытьПорт);
+            this.groupBox2.Location = new System.Drawing.Point(6, 325);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(285, 146);
+            this.groupBox2.TabIndex = 37;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lblСтатусПорта);
+            this.groupBox8.Location = new System.Drawing.Point(96, 15);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Size = new System.Drawing.Size(151, 79);
+            this.groupBox8.TabIndex = 14;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "COM Port Status";
+            // 
+            // lblСтатусПорта
+            // 
+            this.lblСтатусПорта.AutoSize = true;
+            this.lblСтатусПорта.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblСтатусПорта.Location = new System.Drawing.Point(43, 33);
+            this.lblСтатусПорта.Name = "lblСтатусПорта";
+            this.lblСтатусПорта.Size = new System.Drawing.Size(52, 25);
+            this.lblСтатусПорта.TabIndex = 0;
+            this.lblСтатусПорта.Text = "OFF";
+            // 
+            // progrОткрытие
+            // 
+            this.progrОткрытие.Location = new System.Drawing.Point(15, 100);
+            this.progrОткрытие.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.progrОткрытие.Name = "progrОткрытие";
+            this.progrОткрытие.Size = new System.Drawing.Size(245, 23);
+            this.progrОткрытие.TabIndex = 2;
+            // 
+            // btnЗакрытьПорт
+            // 
+            this.btnЗакрытьПорт.Location = new System.Drawing.Point(15, 58);
+            this.btnЗакрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnЗакрытьПорт.Name = "btnЗакрытьПорт";
+            this.btnЗакрытьПорт.Size = new System.Drawing.Size(75, 36);
+            this.btnЗакрытьПорт.TabIndex = 1;
+            this.btnЗакрытьПорт.Text = "Close";
+            this.btnЗакрытьПорт.UseVisualStyleBackColor = true;
+            this.btnЗакрытьПорт.Click += new System.EventHandler(this.btnЗакрытьПорт_Click);
+            // 
+            // btnОткрытьПорт
+            // 
+            this.btnОткрытьПорт.Location = new System.Drawing.Point(15, 15);
+            this.btnОткрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnОткрытьПорт.Name = "btnОткрытьПорт";
+            this.btnОткрытьПорт.Size = new System.Drawing.Size(75, 37);
+            this.btnОткрытьПорт.TabIndex = 0;
+            this.btnОткрытьПорт.Text = "Open";
+            this.btnОткрытьПорт.UseVisualStyleBackColor = true;
+            this.btnОткрытьПорт.Click += new System.EventHandler(this.btnОткрытьПорт_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -641,107 +706,109 @@ namespace WindowsFormsApp2
             // 
             // chart6
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart6.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart6.Legends.Add(legend1);
             this.chart6.Location = new System.Drawing.Point(1082, 243);
             this.chart6.Name = "chart6";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.Color = System.Drawing.Color.Fuchsia;
-            series7.Legend = "Legend1";
-            series7.Name = "LAMBDA";
-            this.chart6.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Fuchsia;
+            series1.Legend = "Legend1";
+            series1.Name = "LAMBDA";
+            this.chart6.Series.Add(series1);
             this.chart6.Size = new System.Drawing.Size(393, 198);
             this.chart6.TabIndex = 32;
             this.chart6.Text = "chart6";
             // 
             // chart5
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart5.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart5.Legends.Add(legend2);
             this.chart5.Location = new System.Drawing.Point(683, 243);
             this.chart5.Name = "chart5";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Color = System.Drawing.Color.Aqua;
-            series8.Legend = "Legend1";
-            series8.Name = "THERM";
-            this.chart5.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Aqua;
+            series2.Legend = "Legend1";
+            series2.Name = "THERM";
+            this.chart5.Series.Add(series2);
             this.chart5.Size = new System.Drawing.Size(393, 198);
             this.chart5.TabIndex = 31;
             this.chart5.Text = "chart5";
             // 
             // chart4
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart4.Legends.Add(legend9);
+            chartArea3.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart4.Legends.Add(legend3);
             this.chart4.Location = new System.Drawing.Point(284, 243);
             this.chart4.Name = "chart4";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Color = System.Drawing.Color.Lime;
-            series9.Legend = "Legend1";
-            series9.Name = "P(ACE)";
-            this.chart4.Series.Add(series9);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Color = System.Drawing.Color.Lime;
+            series3.Legend = "Legend1";
+            series3.Name = "P(ACE)";
+            this.chart4.Series.Add(series3);
             this.chart4.Size = new System.Drawing.Size(393, 198);
             this.chart4.TabIndex = 30;
             this.chart4.Text = "chart4";
             // 
             // chart3
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart3.Legends.Add(legend10);
+            chartArea4.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart3.Legends.Add(legend4);
             this.chart3.Location = new System.Drawing.Point(1082, 6);
             this.chart3.Name = "chart3";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series10.Legend = "Legend1";
-            series10.Name = "P(BFM)";
-            this.chart3.Series.Add(series10);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series4.Legend = "Legend1";
+            series4.Name = "P(BFM)";
+            this.chart3.Series.Add(series4);
             this.chart3.Size = new System.Drawing.Size(393, 198);
             this.chart3.TabIndex = 29;
             this.chart3.Text = "chart3";
             // 
             // chartILD
             // 
-            chartArea11.Name = "ChartArea1";
-            this.chartILD.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chartILD.Legends.Add(legend11);
+            chartArea5.Name = "ChartArea1";
+            this.chartILD.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartILD.Legends.Add(legend5);
             this.chartILD.Location = new System.Drawing.Point(683, 6);
             this.chartILD.Name = "chartILD";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.Color = System.Drawing.Color.Red;
-            series11.Legend = "Legend1";
-            series11.Name = "I(LD)";
-            this.chartILD.Series.Add(series11);
+            series5.BackImage = "None";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.Color = System.Drawing.Color.Red;
+            series5.Legend = "Legend1";
+            series5.Name = "I(LD)";
+            this.chartILD.Series.Add(series5);
             this.chartILD.Size = new System.Drawing.Size(393, 198);
             this.chartILD.TabIndex = 28;
             this.chartILD.Text = "chartILD";
             // 
             // chartITEC
             // 
-            chartArea12.Name = "ChartArea1";
-            this.chartITEC.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chartITEC.Legends.Add(legend12);
+            chartArea6.Name = "ChartArea1";
+            this.chartITEC.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartITEC.Legends.Add(legend6);
             this.chartITEC.Location = new System.Drawing.Point(284, 6);
             this.chartITEC.Name = "chartITEC";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series12.Legend = "Legend1";
-            series12.Name = "I(TEC)";
-            this.chartITEC.Series.Add(series12);
+            series6.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Legend = "Legend1";
+            series6.Name = "I(TEC)";
+            this.chartITEC.Series.Add(series6);
             this.chartITEC.Size = new System.Drawing.Size(393, 198);
             this.chartITEC.TabIndex = 27;
             this.chartITEC.Text = "chartITEC";
@@ -764,72 +831,6 @@ namespace WindowsFormsApp2
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1500, 800);
             this.tabControl1.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox8);
-            this.groupBox2.Controls.Add(this.progrОткрытие);
-            this.groupBox2.Controls.Add(this.btnЗакрытьПорт);
-            this.groupBox2.Controls.Add(this.btnОткрытьПорт);
-            this.groupBox2.Location = new System.Drawing.Point(6, 325);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(285, 146);
-            this.groupBox2.TabIndex = 37;
-            this.groupBox2.TabStop = false;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.lblСтатусПорта);
-            this.groupBox8.Location = new System.Drawing.Point(96, 15);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(151, 79);
-            this.groupBox8.TabIndex = 14;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "COM Port Status";
-            // 
-            // lblСтатусПорта
-            // 
-            this.lblСтатусПорта.AutoSize = true;
-            this.lblСтатусПорта.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblСтатусПорта.Location = new System.Drawing.Point(43, 33);
-            this.lblСтатусПорта.Name = "lblСтатусПорта";
-            this.lblСтатусПорта.Size = new System.Drawing.Size(52, 25);
-            this.lblСтатусПорта.TabIndex = 0;
-            this.lblСтатусПорта.Text = "OFF";
-            // 
-            // progrОткрытие
-            // 
-            this.progrОткрытие.Location = new System.Drawing.Point(15, 100);
-            this.progrОткрытие.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.progrОткрытие.Name = "progrОткрытие";
-            this.progrОткрытие.Size = new System.Drawing.Size(245, 23);
-            this.progrОткрытие.TabIndex = 2;
-            // 
-            // btnЗакрытьПорт
-            // 
-            this.btnЗакрытьПорт.Location = new System.Drawing.Point(15, 58);
-            this.btnЗакрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnЗакрытьПорт.Name = "btnЗакрытьПорт";
-            this.btnЗакрытьПорт.Size = new System.Drawing.Size(75, 36);
-            this.btnЗакрытьПорт.TabIndex = 1;
-            this.btnЗакрытьПорт.Text = "Close";
-            this.btnЗакрытьПорт.UseVisualStyleBackColor = true;
-            this.btnЗакрытьПорт.Click += new System.EventHandler(this.btnЗакрытьПорт_Click);
-            // 
-            // btnОткрытьПорт
-            // 
-            this.btnОткрытьПорт.Location = new System.Drawing.Point(15, 15);
-            this.btnОткрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnОткрытьПорт.Name = "btnОткрытьПорт";
-            this.btnОткрытьПорт.Size = new System.Drawing.Size(75, 37);
-            this.btnОткрытьПорт.TabIndex = 0;
-            this.btnОткрытьПорт.Text = "Open";
-            this.btnОткрытьПорт.UseVisualStyleBackColor = true;
-            this.btnОткрытьПорт.Click += new System.EventHandler(this.btnОткрытьПорт_Click);
             // 
             // Form1
             // 
@@ -860,6 +861,9 @@ namespace WindowsFormsApp2
             this.groupBox1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
@@ -869,9 +873,6 @@ namespace WindowsFormsApp2
             ((System.ComponentModel.ISupportInitialize)(this.chartILD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartITEC)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }

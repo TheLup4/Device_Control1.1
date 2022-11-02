@@ -27,7 +27,7 @@ namespace WindowsFormsApp2
             ClientSize = new Size(1125, 550);
             StartPosition = FormStartPosition.CenterScreen;
             
-            //Красивое движение графиков (Выбор и развертка)
+            //Красивое движение графиков (Выбор и развертка косая)
 
             chart5.Click+= async (s, a) =>
                 {
@@ -102,7 +102,7 @@ namespace WindowsFormsApp2
             chBoxОбновлятьВсегда.Checked = false;
             chBoxДобавлятьНовыеДанные.Checked = true;
 
-            //Настройка графиков
+            //Настройка графиков, позже ссделать foreach
             timer.Enabled = false;
             chartITEC.ChartAreas[0].AxisX.Title = "Time, s";
             chartITEC.ChartAreas[0].AxisX.Minimum = 0;
@@ -247,10 +247,6 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void txtBoxВводДанных_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void txtBoxВводДанных_KeyDown(object sender, KeyEventArgs e)
