@@ -306,14 +306,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApp2.exe" size="39904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApp2.exe" size="35808">
       <assemblyIdentity name="WindowsFormsApp2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>n+eAcjQOzM8YjRtP3KHw2YvZPhVfqPf0ES+tZzj7sUU=</dsig:DigestValue>
+        <dsig:DigestValue>cLjMYifOL+60Oo/jCrhdCLR8Axu6GB4DxpUOOUYA+Vc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

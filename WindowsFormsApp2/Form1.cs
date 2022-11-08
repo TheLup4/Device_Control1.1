@@ -27,7 +27,7 @@ namespace WindowsFormsApp2
             ClientSize = new Size(1125, 550);
             StartPosition = FormStartPosition.CenterScreen;
             
-            //Красивое движение графиков (Выбор и развертка косая)
+/*            //Красивое движение графиков (Выбор и развертка косая)
 
             chart5.Click+= async (s, a) =>
                 {
@@ -63,14 +63,20 @@ namespace WindowsFormsApp2
 
                     
                 };
-            //конец
+            //конец*/
         }
         private void Form1_Load(object sender, EventArgs e)
         {
            ClientSize = new Size(1125, 550);
             KeyPreview = true;
 
-            
+            comboBoxSeries.Items.Add("I(TEC)");
+            comboBoxSeries.Items.Add("I(LD)");
+            comboBoxSeries.Items.Add("P(BFM)");
+            comboBoxSeries.Items.Add("P(ACE)");
+            comboBoxSeries.Items.Add("THERM");
+            comboBoxSeries.Items.Add("LAMBDA");
+
 
             GetRegs(regList);
             foreach (string reg in regList)
@@ -102,55 +108,17 @@ namespace WindowsFormsApp2
             chBoxОбновлятьВсегда.Checked = false;
             chBoxДобавлятьНовыеДанные.Checked = true;
 
-            //Настройка графиков, позже ссделать foreach
             timer.Enabled = false;
             chartITEC.ChartAreas[0].AxisX.Title = "Time, s";
             chartITEC.ChartAreas[0].AxisX.Minimum = 0;
             chartITEC.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
             chartITEC.Series[0].XValueType = ChartValueType.DateTime;
             chartITEC.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
+            chartITEC.ChartAreas[0].AxisX.Maximum = DateTime.Now.AddMinutes(1).ToOADate();
             chartITEC.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
-            chartITEC.ChartAreas[0].AxisX.Interval = 5;
+            chartITEC.ChartAreas[0].AxisX.Interval = 2;
 
-            chartILD.ChartAreas[0].AxisX.Title = "Time, s";
-            chartILD.ChartAreas[0].AxisX.Minimum = 0;
-            chartILD.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
-            chartILD.Series[0].XValueType = ChartValueType.DateTime;
-            chartILD.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
-            chartILD.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
-            chartILD.ChartAreas[0].AxisX.Interval = 5;
-
-            chart3.ChartAreas[0].AxisX.Title = "Time, s";
-            chart3.ChartAreas[0].AxisX.Minimum = 0;
-            chart3.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
-            chart3.Series[0].XValueType = ChartValueType.DateTime;
-            chart3.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
-            chart3.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
-            chart3.ChartAreas[0].AxisX.Interval = 5;
-
-            chart4.ChartAreas[0].AxisX.Title = "Time, s";
-            chart4.ChartAreas[0].AxisX.Minimum = 0;
-            chart4.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
-            chart4.Series[0].XValueType = ChartValueType.DateTime;
-            chart4.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
-            chart4.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
-            chart4.ChartAreas[0].AxisX.Interval = 5;
-
-            chart5.ChartAreas[0].AxisX.Title = "Time, s";
-            chart5.ChartAreas[0].AxisX.Minimum = 0;
-            chart5.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
-            chart5.Series[0].XValueType = ChartValueType.DateTime;
-            chart5.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
-            chart5.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
-            chart5.ChartAreas[0].AxisX.Interval = 5;
-
-            chart6.ChartAreas[0].AxisX.Title = "Time, s";
-            chart6.ChartAreas[0].AxisX.Minimum = 0;
-            chart6.ChartAreas[0].AxisX.LabelStyle.Format = "ss";
-            chart6.Series[0].XValueType = ChartValueType.DateTime;
-            chart6.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
-            chart6.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
-            chart6.ChartAreas[0].AxisX.Interval = 5;
+            
         }
         //СТраница терминала
         private void btnОткрытьПорт_Click(object sender, EventArgs e)
@@ -210,16 +178,29 @@ namespace WindowsFormsApp2
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            timer.Enabled = true;
- 
-            
-            dataOUT = "mon \r\n";
-            serialPort1.WriteLine(dataOUT);
+
+            if (comboBoxSeries.SelectedIndex > -1)
+            {
+                timer.Enabled = true;
+                try
+                {
+                    dataOUT = "mon \r\n";
+                    serialPort1.WriteLine(dataOUT);
+
+
+                }
+                catch (Exception err)
+                {
+
+                    MessageBox.Show(err.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+                MessageBox.Show("Выберите график!");
         }
 
         private void chBoxDTR_CheckedChanged(object sender, EventArgs e)
         {
-            serialPort1.DiscardInBuffer();
             if (chBoxDTR.Checked)
             {
                 serialPort1.DtrEnable = true;
@@ -230,7 +211,6 @@ namespace WindowsFormsApp2
 
         private void chBoxRTS_CheckedChanged(object sender, EventArgs e)
         {
-            serialPort1.DiscardInBuffer();
             if (chBoxRTS.Checked)
             {
                 serialPort1.RtsEnable = true;
@@ -368,23 +348,37 @@ namespace WindowsFormsApp2
 
         }
 
-        
+        int countSeconds=0;
 
         private void timer_Tick(object sender, EventArgs e)
         {
             DateTime timeNow = DateTime.Now;
             if (ITEC.Count != 0)
             {
-                chartITEC.Series[0].Points.AddXY(timeNow, ITEC[ITEC.Count - 1]);
-                chartILD.Series[0].Points.AddXY(timeNow, ILD[ILD.Count - 1]);
-                chart3.Series[0].Points.AddXY(timeNow, PBFM[PBFM.Count - 1]);
-                chart4.Series[0].Points.AddXY(timeNow, PACE[PACE.Count - 1]);
-                chart5.Series[0].Points.AddXY(timeNow, THERM[THERM.Count - 1]);
-                chart6.Series[0].Points.AddXY(timeNow, LAMBDA[LAMBDA.Count - 1]);
+                if (comboBoxSeries.SelectedItem=="I(TEC)")
+                    chartITEC.Series[0].Points.AddXY(timeNow, ITEC[ITEC.Count - 1]);
+                if (comboBoxSeries.SelectedItem == "I(LD)")
+                    chartITEC.Series[1].Points.AddXY(timeNow, ILD[ILD.Count - 1]);
+                if (comboBoxSeries.SelectedItem == "P(BFM)")
+                    chartITEC.Series[2].Points.AddXY(timeNow, PBFM[PBFM.Count - 1]);
+                if (comboBoxSeries.SelectedItem == "P(ACE)")
+                    chartITEC.Series[3].Points.AddXY(timeNow, PACE[PACE.Count - 1]);
+                if (comboBoxSeries.SelectedItem == "THERM")
+                    chartITEC.Series[4].Points.AddXY(timeNow, THERM[THERM.Count - 1]);
+                if (comboBoxSeries.SelectedItem == "LAMBDA")
+                    chartITEC.Series[5].Points.AddXY(timeNow, LAMBDA[LAMBDA.Count - 1]);
+                countSeconds++;
+            }
+            if (countSeconds == 60)
+            {
+                countSeconds = 0;
+                chartITEC.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
+                chartITEC.ChartAreas[0].AxisX.Maximum = DateTime.Now.AddMinutes(1).ToOADate();
+                chartITEC.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+                chartITEC.ChartAreas[0].AxisX.Interval = 2;
             }
         }
 
-     
 
         private void chBoxОбновлятьВсегда_CheckedChanged(object sender, EventArgs e)//alw update
         {

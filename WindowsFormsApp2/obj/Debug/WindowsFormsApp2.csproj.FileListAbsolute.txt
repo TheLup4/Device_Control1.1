@@ -123,7 +123,6 @@ C:\Files\Device_Control\WindowsFormsApp2\bin\Debug\de\DevExpress.Pdf.v21.1.Core.
 C:\Files\Device_Control\WindowsFormsApp2\bin\Debug\es\DevExpress.Pdf.v21.1.Core.resources.dll
 C:\Files\Device_Control\WindowsFormsApp2\bin\Debug\ja\DevExpress.Pdf.v21.1.Core.resources.dll
 C:\Files\Device_Control\WindowsFormsApp2\bin\Debug\ru\DevExpress.Pdf.v21.1.Core.resources.dll
-C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
 C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
 C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
 C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
@@ -134,3 +133,4 @@ C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.application
 C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
 C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Files\Device_Control\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
