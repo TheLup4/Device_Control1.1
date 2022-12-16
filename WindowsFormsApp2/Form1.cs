@@ -30,7 +30,7 @@ namespace WindowsFormsApp2
         private void Form1_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
-
+            
             comboBoxSeries.Items.Add("I(TEC)");
             comboBoxSeries.Items.Add("I(LD)");
             comboBoxSeries.Items.Add("P(BFM)");
@@ -68,7 +68,7 @@ namespace WindowsFormsApp2
             chBoxAlwaysUpdate.Checked = false;
             chBoxAddNewData.Checked = true;
 
-
+            saveIntoNewFile.Checked = false;
 
             timer.Enabled = false;
             chartITEC.ChartAreas[0].AxisX.Title = "Time, s";
@@ -361,28 +361,34 @@ namespace WindowsFormsApp2
 
         private void btnAcceptRegChanges_Click(object sender, EventArgs e)
         {
-            List<string> regs = new List<string>();
-            GetRegs(regs);
-            List<string> regValue = new List<string>();
-            GetRegValue(regValue);
-            int index = regs.IndexOf(comboBoxRegs.SelectedItem.ToString());
-            dataIn =textBoxSetRegValue.Text;
-
-            serialPort1.Write("reg" + index.ToString() + "=" + dataIn + "\r");
-            regValue[regs.IndexOf(comboBoxRegs.SelectedItem.ToString())]= dataIn;
-            StreamWriter writer = new StreamWriter("D:\\repos\\Device_Control1.1\\RegValues.txt");
-            for (int i = 0;regValue.Count> i; i++)
+            try
             {
-                writer.WriteLine(regValue[i].ToString());
-            }
-            writer.Close();
+                List<string> regs = new List<string>();
+                GetRegs(regs);
+                List<string> regValue = new List<string>();
+                GetRegValue(regValue);
+                int index = regs.IndexOf(comboBoxRegs.SelectedItem.ToString());
+                dataIn = textBoxSetRegValue.Text;
 
+                serialPort1.Write("reg" + index.ToString() + "=" + dataIn + "\r");
+                regValue[regs.IndexOf(comboBoxRegs.SelectedItem.ToString())] = dataIn;
+                StreamWriter writer = new StreamWriter("D:\\repos\\Device_Control1.1\\RegValues.txt");
+                for (int i = 0; regValue.Count > i; i++)
+                {
+                    writer.WriteLine(regValue[i].ToString());
+                }
+                writer.Close();
+            }
+            catch { }
 
         }
 
         private void btnSaveIntoExcel_Click(object sender, EventArgs e)
         {
-            if (ITEC.Count != 0)
+            int fileNom = 1;
+            while (File.Exists("D:\\repos\\Device_Control1.1\\DATA" + fileNom.ToString() + ".xlsx"))
+                fileNom++;
+            if (ITEC.Count != 0 && !saveIntoNewFile.Checked)
             {
                 Excel.Application app = new Excel.Application
                 {
@@ -390,9 +396,9 @@ namespace WindowsFormsApp2
                     Visible = true,
                     SheetsInNewWorkbook = 1
                 };
-                Excel.Workbook workBook = app.Workbooks.Add(Type.Missing);
+                Excel.Workbook workBook = app.Workbooks.Open("D:\\repos\\Device_Control1.1\\DATA" + (fileNom-1).ToString() + ".xlsx");
                 Excel.Worksheet sheet = (Excel.Worksheet)app.Worksheets.get_Item(1);
-                sheet.Name = "DATA";
+                
 
                 int j = 1; // счетчик столбиков в экселе
 
@@ -405,11 +411,40 @@ namespace WindowsFormsApp2
                     sheet.Cells[i, 5] = String.Format(THERM[i - 1].ToString(), i, j);
                     sheet.Cells[i, 6] = String.Format(LAMBDA[i - 1].ToString(), i, j);
                 }
-                    app.Application.ActiveWorkbook.SaveAs("D:\\repos\\Device_Control1.1\\DATA.xlsx", Type.Missing,
-  Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlNoChange,
-  Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
                     app.Quit();
             }
+
+            if (saveIntoNewFile.Checked)
+            {
+                Excel.Application app = new Excel.Application
+                {
+                    //Отобразить Excel
+                    Visible = true,
+                    SheetsInNewWorkbook = 1
+                };
+                Excel.Workbook workBook = app.Workbooks.Add(Type.Missing);
+                Excel.Worksheet sheet = (Excel.Worksheet)app.Worksheets.get_Item(1);
+                sheet.Name = "DATA" + (fileNom - 1).ToString();
+
+                int j = 1; // счетчик столбиков в экселе
+
+                for (int i = 1; i < ITEC.Count; i++)
+                {
+                    sheet.Cells[i, 1] = String.Format(ITEC[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 2] = String.Format(ILD[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 3] = String.Format(PBFM[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 4] = String.Format(PACE[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 5] = String.Format(THERM[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 6] = String.Format(LAMBDA[i - 1].ToString(), i, j);
+                }
+                app.Application.ActiveWorkbook.SaveAs("D:\\repos\\Device_Control1.1\\DATA" + fileNom.ToString() + ".xlsx", Type.Missing,
+Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlNoChange,
+Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                app.Quit();
+
+            }
+
         }
 
         private void chBoxAlwaysUpdate_CheckedChanged(object sender, EventArgs e)//alw update

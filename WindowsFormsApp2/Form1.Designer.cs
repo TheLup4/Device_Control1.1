@@ -99,6 +99,7 @@ namespace WindowsFormsApp2
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.saveIntoNewFile = new System.Windows.Forms.CheckBox();
             this.tabPage2.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -641,6 +642,7 @@ namespace WindowsFormsApp2
             // groupBox6
             // 
             this.groupBox6.AutoSize = true;
+            this.groupBox6.Controls.Add(this.saveIntoNewFile);
             this.groupBox6.Controls.Add(this.btnSaveIntoExcel);
             this.groupBox6.Controls.Add(this.btnStopMeasure);
             this.groupBox6.Controls.Add(this.label12);
@@ -663,9 +665,9 @@ namespace WindowsFormsApp2
             // 
             // btnSaveIntoExcel
             // 
-            this.btnSaveIntoExcel.Location = new System.Drawing.Point(57, 265);
+            this.btnSaveIntoExcel.Location = new System.Drawing.Point(10, 271);
             this.btnSaveIntoExcel.Name = "btnSaveIntoExcel";
-            this.btnSaveIntoExcel.Size = new System.Drawing.Size(138, 45);
+            this.btnSaveIntoExcel.Size = new System.Drawing.Size(109, 32);
             this.btnSaveIntoExcel.TabIndex = 43;
             this.btnSaveIntoExcel.Text = "Сохранить в Excel";
             this.btnSaveIntoExcel.UseVisualStyleBackColor = true;
@@ -865,6 +867,16 @@ namespace WindowsFormsApp2
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // saveIntoNewFile
+            // 
+            this.saveIntoNewFile.AutoSize = true;
+            this.saveIntoNewFile.Location = new System.Drawing.Point(125, 280);
+            this.saveIntoNewFile.Name = "saveIntoNewFile";
+            this.saveIntoNewFile.Size = new System.Drawing.Size(126, 17);
+            this.saveIntoNewFile.TabIndex = 44;
+            this.saveIntoNewFile.Text = "Сохранять в новый ";
+            this.saveIntoNewFile.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -968,6 +980,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.TextBox textBoxSetRegValue;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnSaveIntoExcel;
+        private System.Windows.Forms.CheckBox saveIntoNewFile;
     }
 }
 
