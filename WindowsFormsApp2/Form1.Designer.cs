@@ -42,14 +42,14 @@ namespace WindowsFormsApp2
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.txtВходящиеДанные = new System.Windows.Forms.RichTextBox();
+            this.txtInputData = new System.Windows.Forms.RichTextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.lblОбъёмВхДанных = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.chBoxДобавлятьНовыеДанные = new System.Windows.Forms.CheckBox();
-            this.chBoxОбновлятьВсегда = new System.Windows.Forms.CheckBox();
+            this.chBoxAddNewData = new System.Windows.Forms.CheckBox();
+            this.chBoxAlwaysUpdate = new System.Windows.Forms.CheckBox();
             this.btnОчиститьОкноВывода = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -57,12 +57,11 @@ namespace WindowsFormsApp2
             this.lblОбъёмИсхДанных = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.chBoxWrite = new System.Windows.Forms.CheckBox();
             this.chBoxИспользEnter = new System.Windows.Forms.CheckBox();
             this.chBoxWriteLine = new System.Windows.Forms.CheckBox();
             this.btnОтправитьДанные = new System.Windows.Forms.Button();
             this.btnОчиститьОкноВвода = new System.Windows.Forms.Button();
-            this.txtBoxВводДанных = new System.Windows.Forms.TextBox();
+            this.txtBoxInputData = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chBoxRTS = new System.Windows.Forms.CheckBox();
             this.chBoxDTR = new System.Windows.Forms.CheckBox();
@@ -77,23 +76,29 @@ namespace WindowsFormsApp2
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.lblСтатусПорта = new System.Windows.Forms.Label();
-            this.progrОткрытие = new System.Windows.Forms.ProgressBar();
-            this.btnЗакрытьПорт = new System.Windows.Forms.Button();
-            this.btnОткрытьПорт = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPortStatus = new System.Windows.Forms.Label();
             this.comboBoxCOM = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.progrOpening = new System.Windows.Forms.ProgressBar();
+            this.btnClosePort = new System.Windows.Forms.Button();
+            this.btnOpenPort = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnSaveIntoExcel = new System.Windows.Forms.Button();
+            this.btnStopMeasure = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxSetRegValue = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxSeries = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.textBoxGetRegValue = new System.Windows.Forms.TextBox();
+            this.comboBoxRegs = new System.Windows.Forms.ComboBox();
+            this.btnAcceptRegChanges = new System.Windows.Forms.Button();
             this.chartITEC = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -126,45 +131,50 @@ namespace WindowsFormsApp2
             this.tabPage2.Controls.Add(this.groupBox9);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1492, 771);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(1440, 566);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Терминал";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.txtВходящиеДанные);
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Controls.Add(this.txtInputData);
             this.groupBox9.Controls.Add(this.groupBox10);
-            this.groupBox9.Location = new System.Drawing.Point(784, 5);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Location = new System.Drawing.Point(588, 4);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(499, 423);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Size = new System.Drawing.Size(524, 445);
             this.groupBox9.TabIndex = 18;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Receiver Control";
             // 
-            // txtВходящиеДанные
+            // txtInputData
             // 
-            this.txtВходящиеДанные.Location = new System.Drawing.Point(6, 18);
-            this.txtВходящиеДанные.Name = "txtВходящиеДанные";
-            this.txtВходящиеДанные.Size = new System.Drawing.Size(479, 154);
-            this.txtВходящиеДанные.TabIndex = 17;
-            this.txtВходящиеДанные.Text = "";
+            this.txtInputData.Location = new System.Drawing.Point(4, 15);
+            this.txtInputData.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInputData.Name = "txtInputData";
+            this.txtInputData.Size = new System.Drawing.Size(516, 226);
+            this.txtInputData.TabIndex = 17;
+            this.txtInputData.Text = "";
             // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.groupBox11);
             this.groupBox10.Controls.Add(this.groupBox13);
             this.groupBox10.Controls.Add(this.btnОчиститьОкноВывода);
-            this.groupBox10.Location = new System.Drawing.Point(13, 181);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox10.Location = new System.Drawing.Point(72, 244);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox10.Size = new System.Drawing.Size(477, 236);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox10.Size = new System.Drawing.Size(386, 197);
             this.groupBox10.TabIndex = 15;
             this.groupBox10.TabStop = false;
             // 
@@ -172,11 +182,11 @@ namespace WindowsFormsApp2
             // 
             this.groupBox11.Controls.Add(this.lblОбъёмВхДанных);
             this.groupBox11.Controls.Add(this.label10);
-            this.groupBox11.Location = new System.Drawing.Point(5, 143);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox11.Location = new System.Drawing.Point(29, 116);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox11.Size = new System.Drawing.Size(467, 75);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox11.Size = new System.Drawing.Size(350, 61);
             this.groupBox11.TabIndex = 16;
             this.groupBox11.TabStop = false;
             // 
@@ -184,9 +194,10 @@ namespace WindowsFormsApp2
             // 
             this.lblОбъёмВхДанных.AutoSize = true;
             this.lblОбъёмВхДанных.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblОбъёмВхДанных.Location = new System.Drawing.Point(281, 30);
+            this.lblОбъёмВхДанных.Location = new System.Drawing.Point(211, 24);
+            this.lblОбъёмВхДанных.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblОбъёмВхДанных.Name = "lblОбъёмВхДанных";
-            this.lblОбъёмВхДанных.Size = new System.Drawing.Size(27, 20);
+            this.lblОбъёмВхДанных.Size = new System.Drawing.Size(24, 17);
             this.lblОбъёмВхДанных.TabIndex = 1;
             this.lblОбъёмВхДанных.Text = "00";
             // 
@@ -194,69 +205,73 @@ namespace WindowsFormsApp2
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(120, 30);
+            this.label10.Location = new System.Drawing.Point(90, 24);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 20);
+            this.label10.Size = new System.Drawing.Size(124, 17);
             this.label10.TabIndex = 0;
             this.label10.Text = "Data OUT Length:";
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.chBoxДобавлятьНовыеДанные);
-            this.groupBox13.Controls.Add(this.chBoxОбновлятьВсегда);
-            this.groupBox13.Location = new System.Drawing.Point(257, 21);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox13.Controls.Add(this.chBoxAddNewData);
+            this.groupBox13.Controls.Add(this.chBoxAlwaysUpdate);
+            this.groupBox13.Location = new System.Drawing.Point(193, 17);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox13.Size = new System.Drawing.Size(153, 103);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox13.Size = new System.Drawing.Size(115, 84);
             this.groupBox13.TabIndex = 14;
             this.groupBox13.TabStop = false;
             // 
-            // chBoxДобавлятьНовыеДанные
+            // chBoxAddNewData
             // 
-            this.chBoxДобавлятьНовыеДанные.AutoSize = true;
-            this.chBoxДобавлятьНовыеДанные.Location = new System.Drawing.Point(7, 57);
-            this.chBoxДобавлятьНовыеДанные.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chBoxДобавлятьНовыеДанные.Name = "chBoxДобавлятьНовыеДанные";
-            this.chBoxДобавлятьНовыеДанные.Size = new System.Drawing.Size(136, 21);
-            this.chBoxДобавлятьНовыеДанные.TabIndex = 1;
-            this.chBoxДобавлятьНовыеДанные.Text = "Add To Old Data";
-            this.chBoxДобавлятьНовыеДанные.UseVisualStyleBackColor = true;
-            this.chBoxДобавлятьНовыеДанные.CheckedChanged += new System.EventHandler(this.chBoxДобавлятьНовыеДанные_CheckedChanged);
+            this.chBoxAddNewData.AutoSize = true;
+            this.chBoxAddNewData.Location = new System.Drawing.Point(5, 46);
+            this.chBoxAddNewData.Margin = new System.Windows.Forms.Padding(2);
+            this.chBoxAddNewData.Name = "chBoxAddNewData";
+            this.chBoxAddNewData.Size = new System.Drawing.Size(106, 17);
+            this.chBoxAddNewData.TabIndex = 1;
+            this.chBoxAddNewData.Text = "Add To Old Data";
+            this.chBoxAddNewData.UseVisualStyleBackColor = true;
+            this.chBoxAddNewData.CheckedChanged += new System.EventHandler(this.chBoxAddNewData_CheckedChanged);
             // 
-            // chBoxОбновлятьВсегда
+            // chBoxAlwaysUpdate
             // 
-            this.chBoxОбновлятьВсегда.AutoSize = true;
-            this.chBoxОбновлятьВсегда.Location = new System.Drawing.Point(7, 30);
-            this.chBoxОбновлятьВсегда.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chBoxОбновлятьВсегда.Name = "chBoxОбновлятьВсегда";
-            this.chBoxОбновлятьВсегда.Size = new System.Drawing.Size(123, 21);
-            this.chBoxОбновлятьВсегда.TabIndex = 0;
-            this.chBoxОбновлятьВсегда.Text = "Always Update";
-            this.chBoxОбновлятьВсегда.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.chBoxОбновлятьВсегда.UseVisualStyleBackColor = true;
-            this.chBoxОбновлятьВсегда.CheckedChanged += new System.EventHandler(this.chBoxОбновлятьВсегда_CheckedChanged);
+            this.chBoxAlwaysUpdate.AutoSize = true;
+            this.chBoxAlwaysUpdate.Location = new System.Drawing.Point(5, 24);
+            this.chBoxAlwaysUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.chBoxAlwaysUpdate.Name = "chBoxAlwaysUpdate";
+            this.chBoxAlwaysUpdate.Size = new System.Drawing.Size(97, 17);
+            this.chBoxAlwaysUpdate.TabIndex = 0;
+            this.chBoxAlwaysUpdate.Text = "Always Update";
+            this.chBoxAlwaysUpdate.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.chBoxAlwaysUpdate.UseVisualStyleBackColor = true;
+            this.chBoxAlwaysUpdate.CheckedChanged += new System.EventHandler(this.chBoxAlwaysUpdate_CheckedChanged);
             // 
             // btnОчиститьОкноВывода
             // 
-            this.btnОчиститьОкноВывода.Location = new System.Drawing.Point(101, 21);
-            this.btnОчиститьОкноВывода.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnОчиститьОкноВывода.Location = new System.Drawing.Point(41, 17);
+            this.btnОчиститьОкноВывода.Margin = new System.Windows.Forms.Padding(2);
             this.btnОчиститьОкноВывода.Name = "btnОчиститьОкноВывода";
-            this.btnОчиститьОкноВывода.Size = new System.Drawing.Size(133, 103);
+            this.btnОчиститьОкноВывода.Size = new System.Drawing.Size(100, 84);
             this.btnОчиститьОкноВывода.TabIndex = 13;
             this.btnОчиститьОкноВывода.Text = "Clear Data IN";
             this.btnОчиститьОкноВывода.UseVisualStyleBackColor = true;
-            this.btnОчиститьОкноВывода.Click += new System.EventHandler(this.btnОчиститьОкноВывода_Click);
+            this.btnОчиститьОкноВывода.Click += new System.EventHandler(this.btnClearOutWindow_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.txtBoxВводДанных);
-            this.groupBox3.Location = new System.Drawing.Point(288, 5);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Controls.Add(this.txtBoxInputData);
+            this.groupBox3.Location = new System.Drawing.Point(216, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(491, 423);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(368, 344);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Transmitter Control";
@@ -267,11 +282,11 @@ namespace WindowsFormsApp2
             this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.btnОтправитьДанные);
             this.groupBox4.Controls.Add(this.btnОчиститьОкноВвода);
-            this.groupBox4.Location = new System.Drawing.Point(5, 181);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Location = new System.Drawing.Point(4, 147);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(477, 236);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(358, 192);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             // 
@@ -279,11 +294,11 @@ namespace WindowsFormsApp2
             // 
             this.groupBox7.Controls.Add(this.lblОбъёмИсхДанных);
             this.groupBox7.Controls.Add(this.label6);
-            this.groupBox7.Location = new System.Drawing.Point(5, 143);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox7.Location = new System.Drawing.Point(4, 116);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox7.Size = new System.Drawing.Size(467, 75);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Size = new System.Drawing.Size(350, 61);
             this.groupBox7.TabIndex = 16;
             this.groupBox7.TabStop = false;
             // 
@@ -291,9 +306,10 @@ namespace WindowsFormsApp2
             // 
             this.lblОбъёмИсхДанных.AutoSize = true;
             this.lblОбъёмИсхДанных.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblОбъёмИсхДанных.Location = new System.Drawing.Point(281, 30);
+            this.lblОбъёмИсхДанных.Location = new System.Drawing.Point(211, 24);
+            this.lblОбъёмИсхДанных.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblОбъёмИсхДанных.Name = "lblОбъёмИсхДанных";
-            this.lblОбъёмИсхДанных.Size = new System.Drawing.Size(27, 20);
+            this.lblОбъёмИсхДанных.Size = new System.Drawing.Size(24, 17);
             this.lblОбъёмИсхДанных.TabIndex = 1;
             this.lblОбъёмИсхДанных.Text = "00";
             // 
@@ -301,44 +317,32 @@ namespace WindowsFormsApp2
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(120, 30);
+            this.label6.Location = new System.Drawing.Point(90, 24);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 20);
+            this.label6.Size = new System.Drawing.Size(107, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Data IN Length:";
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.chBoxWrite);
             this.groupBox5.Controls.Add(this.chBoxИспользEnter);
             this.groupBox5.Controls.Add(this.chBoxWriteLine);
-            this.groupBox5.Location = new System.Drawing.Point(161, 12);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Location = new System.Drawing.Point(121, 10);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(310, 103);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Size = new System.Drawing.Size(232, 84);
             this.groupBox5.TabIndex = 14;
             this.groupBox5.TabStop = false;
-            // 
-            // chBoxWrite
-            // 
-            this.chBoxWrite.AutoSize = true;
-            this.chBoxWrite.Location = new System.Drawing.Point(98, 67);
-            this.chBoxWrite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chBoxWrite.Name = "chBoxWrite";
-            this.chBoxWrite.Size = new System.Drawing.Size(63, 21);
-            this.chBoxWrite.TabIndex = 1;
-            this.chBoxWrite.Text = "Write";
-            this.chBoxWrite.UseVisualStyleBackColor = true;
-            this.chBoxWrite.CheckedChanged += new System.EventHandler(this.chBoxWrite_CheckedChanged);
             // 
             // chBoxИспользEnter
             // 
             this.chBoxИспользEnter.AutoSize = true;
-            this.chBoxИспользEnter.Location = new System.Drawing.Point(98, 20);
-            this.chBoxИспользEnter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chBoxИспользEnter.Location = new System.Drawing.Point(74, 16);
+            this.chBoxИспользEnter.Margin = new System.Windows.Forms.Padding(2);
             this.chBoxИспользEnter.Name = "chBoxИспользEnter";
-            this.chBoxИспользEnter.Size = new System.Drawing.Size(104, 21);
+            this.chBoxИспользEnter.Size = new System.Drawing.Size(81, 17);
             this.chBoxИспользEnter.TabIndex = 1;
             this.chBoxИспользEnter.Text = "Using Enter";
             this.chBoxИспользEnter.UseVisualStyleBackColor = true;
@@ -346,48 +350,50 @@ namespace WindowsFormsApp2
             // chBoxWriteLine
             // 
             this.chBoxWriteLine.AutoSize = true;
-            this.chBoxWriteLine.Location = new System.Drawing.Point(98, 45);
-            this.chBoxWriteLine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chBoxWriteLine.Location = new System.Drawing.Point(74, 37);
+            this.chBoxWriteLine.Margin = new System.Windows.Forms.Padding(2);
             this.chBoxWriteLine.Name = "chBoxWriteLine";
-            this.chBoxWriteLine.Size = new System.Drawing.Size(90, 21);
+            this.chBoxWriteLine.Size = new System.Drawing.Size(71, 17);
             this.chBoxWriteLine.TabIndex = 0;
             this.chBoxWriteLine.Text = "WriteLine";
             this.chBoxWriteLine.UseVisualStyleBackColor = true;
-            this.chBoxWriteLine.CheckedChanged += new System.EventHandler(this.chBoxWriteLine_CheckedChanged);
             // 
             // btnОтправитьДанные
             // 
-            this.btnОтправитьДанные.Location = new System.Drawing.Point(5, 12);
-            this.btnОтправитьДанные.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnОтправитьДанные.Location = new System.Drawing.Point(4, 10);
+            this.btnОтправитьДанные.Margin = new System.Windows.Forms.Padding(2);
             this.btnОтправитьДанные.Name = "btnОтправитьДанные";
-            this.btnОтправитьДанные.Size = new System.Drawing.Size(133, 41);
+            this.btnОтправитьДанные.Size = new System.Drawing.Size(100, 33);
             this.btnОтправитьДанные.TabIndex = 11;
             this.btnОтправитьДанные.Text = "Send Data";
             this.btnОтправитьДанные.UseVisualStyleBackColor = true;
-            this.btnОтправитьДанные.Click += new System.EventHandler(this.btnОтправитьДанные_Click);
+            this.btnОтправитьДанные.Click += new System.EventHandler(this.btnSendData_Click);
             // 
             // btnОчиститьОкноВвода
             // 
-            this.btnОчиститьОкноВвода.Location = new System.Drawing.Point(5, 59);
-            this.btnОчиститьОкноВвода.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnОчиститьОкноВвода.Location = new System.Drawing.Point(4, 48);
+            this.btnОчиститьОкноВвода.Margin = new System.Windows.Forms.Padding(2);
             this.btnОчиститьОкноВвода.Name = "btnОчиститьОкноВвода";
-            this.btnОчиститьОкноВвода.Size = new System.Drawing.Size(133, 41);
+            this.btnОчиститьОкноВвода.Size = new System.Drawing.Size(100, 33);
             this.btnОчиститьОкноВвода.TabIndex = 13;
             this.btnОчиститьОкноВвода.Text = "Clear Data OUT";
             this.btnОчиститьОкноВвода.UseVisualStyleBackColor = true;
             this.btnОчиститьОкноВвода.Click += new System.EventHandler(this.btnОчиститьОкноВвода_Click);
             // 
-            // txtBoxВводДанных
+            // txtBoxInputData
             // 
-            this.txtBoxВводДанных.Location = new System.Drawing.Point(5, 18);
-            this.txtBoxВводДанных.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBoxВводДанных.Multiline = true;
-            this.txtBoxВводДанных.Name = "txtBoxВводДанных";
-            this.txtBoxВводДанных.Size = new System.Drawing.Size(479, 154);
-            this.txtBoxВводДанных.TabIndex = 12;
+            this.txtBoxInputData.Location = new System.Drawing.Point(4, 15);
+            this.txtBoxInputData.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBoxInputData.Multiline = true;
+            this.txtBoxInputData.Name = "txtBoxInputData";
+            this.txtBoxInputData.Size = new System.Drawing.Size(360, 126);
+            this.txtBoxInputData.TabIndex = 12;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.chBoxRTS);
             this.groupBox1.Controls.Add(this.chBoxDTR);
             this.groupBox1.Controls.Add(this.label5);
@@ -398,11 +404,11 @@ namespace WindowsFormsApp2
             this.groupBox1.Controls.Add(this.comboBoxDataBits);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.comboBoxBaud);
-            this.groupBox1.Location = new System.Drawing.Point(3, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(2, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(279, 270);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(209, 219);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CP Control";
@@ -410,10 +416,10 @@ namespace WindowsFormsApp2
             // chBoxRTS
             // 
             this.chBoxRTS.AutoSize = true;
-            this.chBoxRTS.Location = new System.Drawing.Point(144, 201);
-            this.chBoxRTS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chBoxRTS.Location = new System.Drawing.Point(108, 163);
+            this.chBoxRTS.Margin = new System.Windows.Forms.Padding(2);
             this.chBoxRTS.Name = "chBoxRTS";
-            this.chBoxRTS.Size = new System.Drawing.Size(116, 21);
+            this.chBoxRTS.Size = new System.Drawing.Size(93, 17);
             this.chBoxRTS.TabIndex = 11;
             this.chBoxRTS.Text = "RTS ENABLE";
             this.chBoxRTS.UseVisualStyleBackColor = true;
@@ -422,10 +428,10 @@ namespace WindowsFormsApp2
             // chBoxDTR
             // 
             this.chBoxDTR.AutoSize = true;
-            this.chBoxDTR.Location = new System.Drawing.Point(15, 201);
-            this.chBoxDTR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chBoxDTR.Location = new System.Drawing.Point(11, 163);
+            this.chBoxDTR.Margin = new System.Windows.Forms.Padding(2);
             this.chBoxDTR.Name = "chBoxDTR";
-            this.chBoxDTR.Size = new System.Drawing.Size(117, 21);
+            this.chBoxDTR.Size = new System.Drawing.Size(94, 17);
             this.chBoxDTR.TabIndex = 10;
             this.chBoxDTR.Text = "DTR ENABLE";
             this.chBoxDTR.UseVisualStyleBackColor = true;
@@ -434,28 +440,30 @@ namespace WindowsFormsApp2
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 158);
+            this.label5.Location = new System.Drawing.Point(9, 128);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Parity Bits";
             // 
             // comboBoxParityBits
             // 
             this.comboBoxParityBits.FormattingEnabled = true;
-            this.comboBoxParityBits.Location = new System.Drawing.Point(93, 153);
-            this.comboBoxParityBits.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxParityBits.Location = new System.Drawing.Point(70, 124);
+            this.comboBoxParityBits.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxParityBits.Name = "comboBoxParityBits";
-            this.comboBoxParityBits.Size = new System.Drawing.Size(167, 24);
+            this.comboBoxParityBits.Size = new System.Drawing.Size(126, 21);
             this.comboBoxParityBits.TabIndex = 8;
             this.comboBoxParityBits.Text = "None";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 126);
+            this.label4.Location = new System.Drawing.Point(9, 102);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 17);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Stop Bits";
             // 
@@ -465,19 +473,20 @@ namespace WindowsFormsApp2
             this.comboBoxStopBits.Items.AddRange(new object[] {
             "One",
             "Two"});
-            this.comboBoxStopBits.Location = new System.Drawing.Point(93, 122);
-            this.comboBoxStopBits.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxStopBits.Location = new System.Drawing.Point(70, 99);
+            this.comboBoxStopBits.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxStopBits.Name = "comboBoxStopBits";
-            this.comboBoxStopBits.Size = new System.Drawing.Size(167, 24);
+            this.comboBoxStopBits.Size = new System.Drawing.Size(126, 21);
             this.comboBoxStopBits.TabIndex = 6;
             this.comboBoxStopBits.Text = "One";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 95);
+            this.label7.Location = new System.Drawing.Point(9, 77);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 17);
+            this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Data Bits";
             // 
@@ -489,19 +498,20 @@ namespace WindowsFormsApp2
             "6",
             "7",
             "8"});
-            this.comboBoxDataBits.Location = new System.Drawing.Point(93, 92);
-            this.comboBoxDataBits.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxDataBits.Location = new System.Drawing.Point(70, 75);
+            this.comboBoxDataBits.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDataBits.Name = "comboBoxDataBits";
-            this.comboBoxDataBits.Size = new System.Drawing.Size(167, 24);
+            this.comboBoxDataBits.Size = new System.Drawing.Size(126, 21);
             this.comboBoxDataBits.TabIndex = 4;
             this.comboBoxDataBits.Text = "8";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 65);
+            this.label8.Location = new System.Drawing.Point(9, 53);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 17);
+            this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 3;
             this.label8.Text = "Baud Rate";
             // 
@@ -517,196 +527,274 @@ namespace WindowsFormsApp2
             "38400",
             "57600",
             "115200"});
-            this.comboBoxBaud.Location = new System.Drawing.Point(93, 62);
-            this.comboBoxBaud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxBaud.Location = new System.Drawing.Point(70, 50);
+            this.comboBoxBaud.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBaud.Name = "comboBoxBaud";
-            this.comboBoxBaud.Size = new System.Drawing.Size(167, 24);
+            this.comboBoxBaud.Size = new System.Drawing.Size(126, 21);
             this.comboBoxBaud.TabIndex = 2;
             this.comboBoxBaud.Text = "115200";
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.comboBoxCOM);
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.chartITEC);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1492, 771);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(1440, 566);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "ГРАФИК";
+            this.tabPage1.Text = "График";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.groupBox8);
-            this.groupBox2.Controls.Add(this.progrОткрытие);
-            this.groupBox2.Controls.Add(this.btnЗакрытьПорт);
-            this.groupBox2.Controls.Add(this.btnОткрытьПорт);
-            this.groupBox2.Location = new System.Drawing.Point(6, 335);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Controls.Add(this.comboBoxCOM);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.progrOpening);
+            this.groupBox2.Controls.Add(this.btnClosePort);
+            this.groupBox2.Controls.Add(this.btnOpenPort);
+            this.groupBox2.Location = new System.Drawing.Point(4, 433);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(285, 136);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(197, 123);
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.lblСтатусПорта);
-            this.groupBox8.Location = new System.Drawing.Point(96, 15);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Controls.Add(this.lblPortStatus);
+            this.groupBox8.Location = new System.Drawing.Point(80, 32);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(151, 79);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox8.Size = new System.Drawing.Size(113, 64);
             this.groupBox8.TabIndex = 14;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "COM Port Status";
+            this.groupBox8.Text = "COM Статус";
             // 
-            // lblСтатусПорта
+            // lblPortStatus
             // 
-            this.lblСтатусПорта.AutoSize = true;
-            this.lblСтатусПорта.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblСтатусПорта.Location = new System.Drawing.Point(43, 33);
-            this.lblСтатусПорта.Name = "lblСтатусПорта";
-            this.lblСтатусПорта.Size = new System.Drawing.Size(52, 25);
-            this.lblСтатусПорта.TabIndex = 0;
-            this.lblСтатусПорта.Text = "OFF";
-            // 
-            // progrОткрытие
-            // 
-            this.progrОткрытие.Location = new System.Drawing.Point(15, 100);
-            this.progrОткрытие.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.progrОткрытие.Name = "progrОткрытие";
-            this.progrОткрытие.Size = new System.Drawing.Size(245, 23);
-            this.progrОткрытие.TabIndex = 2;
-            // 
-            // btnЗакрытьПорт
-            // 
-            this.btnЗакрытьПорт.Location = new System.Drawing.Point(15, 58);
-            this.btnЗакрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnЗакрытьПорт.Name = "btnЗакрытьПорт";
-            this.btnЗакрытьПорт.Size = new System.Drawing.Size(75, 36);
-            this.btnЗакрытьПорт.TabIndex = 1;
-            this.btnЗакрытьПорт.Text = "Close";
-            this.btnЗакрытьПорт.UseVisualStyleBackColor = true;
-            this.btnЗакрытьПорт.Click += new System.EventHandler(this.btnЗакрытьПорт_Click);
-            // 
-            // btnОткрытьПорт
-            // 
-            this.btnОткрытьПорт.Location = new System.Drawing.Point(15, 15);
-            this.btnОткрытьПорт.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnОткрытьПорт.Name = "btnОткрытьПорт";
-            this.btnОткрытьПорт.Size = new System.Drawing.Size(75, 37);
-            this.btnОткрытьПорт.TabIndex = 0;
-            this.btnОткрытьПорт.Text = "Open";
-            this.btnОткрытьПорт.UseVisualStyleBackColor = true;
-            this.btnОткрытьПорт.Click += new System.EventHandler(this.btnОткрытьПорт_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 310);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 17);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Com Port";
+            this.lblPortStatus.AutoSize = true;
+            this.lblPortStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblPortStatus.Location = new System.Drawing.Point(32, 27);
+            this.lblPortStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPortStatus.Name = "lblPortStatus";
+            this.lblPortStatus.Size = new System.Drawing.Size(41, 20);
+            this.lblPortStatus.TabIndex = 0;
+            this.lblPortStatus.Text = "OFF";
             // 
             // comboBoxCOM
             // 
             this.comboBoxCOM.FormattingEnabled = true;
-            this.comboBoxCOM.Location = new System.Drawing.Point(96, 307);
-            this.comboBoxCOM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCOM.Location = new System.Drawing.Point(67, 10);
+            this.comboBoxCOM.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCOM.Name = "comboBoxCOM";
-            this.comboBoxCOM.Size = new System.Drawing.Size(167, 24);
+            this.comboBoxCOM.Size = new System.Drawing.Size(126, 21);
             this.comboBoxCOM.TabIndex = 35;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(5, 13);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Com Port";
+            // 
+            // progrOpening
+            // 
+            this.progrOpening.Location = new System.Drawing.Point(5, 100);
+            this.progrOpening.Margin = new System.Windows.Forms.Padding(2);
+            this.progrOpening.Name = "progrOpening";
+            this.progrOpening.Size = new System.Drawing.Size(188, 19);
+            this.progrOpening.TabIndex = 2;
+            // 
+            // btnClosePort
+            // 
+            this.btnClosePort.Location = new System.Drawing.Point(5, 67);
+            this.btnClosePort.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClosePort.Name = "btnClosePort";
+            this.btnClosePort.Size = new System.Drawing.Size(71, 29);
+            this.btnClosePort.TabIndex = 1;
+            this.btnClosePort.Text = "Закрыть";
+            this.btnClosePort.UseVisualStyleBackColor = true;
+            this.btnClosePort.Click += new System.EventHandler(this.btnClosePort_Click);
+            // 
+            // btnOpenPort
+            // 
+            this.btnOpenPort.Location = new System.Drawing.Point(4, 33);
+            this.btnOpenPort.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOpenPort.Name = "btnOpenPort";
+            this.btnOpenPort.Size = new System.Drawing.Size(72, 30);
+            this.btnOpenPort.TabIndex = 0;
+            this.btnOpenPort.Text = "Открыть";
+            this.btnOpenPort.UseVisualStyleBackColor = true;
+            this.btnOpenPort.Click += new System.EventHandler(this.btnOpenPort_Click);
             // 
             // groupBox6
             // 
+            this.groupBox6.AutoSize = true;
+            this.groupBox6.Controls.Add(this.btnSaveIntoExcel);
+            this.groupBox6.Controls.Add(this.btnStopMeasure);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.textBoxSetRegValue);
+            this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Controls.Add(this.comboBoxSeries);
             this.groupBox6.Controls.Add(this.label3);
             this.groupBox6.Controls.Add(this.button1);
-            this.groupBox6.Controls.Add(this.textBox1);
-            this.groupBox6.Controls.Add(this.comboBox2);
-            this.groupBox6.Controls.Add(this.button5);
-            this.groupBox6.Location = new System.Drawing.Point(10, 6);
+            this.groupBox6.Controls.Add(this.textBoxGetRegValue);
+            this.groupBox6.Controls.Add(this.comboBoxRegs);
+            this.groupBox6.Controls.Add(this.btnAcceptRegChanges);
+            this.groupBox6.Location = new System.Drawing.Point(2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(253, 296);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Size = new System.Drawing.Size(256, 382);
             this.groupBox6.TabIndex = 34;
             this.groupBox6.TabStop = false;
+            // 
+            // btnSaveIntoExcel
+            // 
+            this.btnSaveIntoExcel.Location = new System.Drawing.Point(57, 265);
+            this.btnSaveIntoExcel.Name = "btnSaveIntoExcel";
+            this.btnSaveIntoExcel.Size = new System.Drawing.Size(138, 45);
+            this.btnSaveIntoExcel.TabIndex = 43;
+            this.btnSaveIntoExcel.Text = "Сохранить в Excel";
+            this.btnSaveIntoExcel.UseVisualStyleBackColor = true;
+            this.btnSaveIntoExcel.Click += new System.EventHandler(this.btnSaveIntoExcel_Click);
+            // 
+            // btnStopMeasure
+            // 
+            this.btnStopMeasure.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStopMeasure.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStopMeasure.Location = new System.Drawing.Point(57, 315);
+            this.btnStopMeasure.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStopMeasure.Name = "btnStopMeasure";
+            this.btnStopMeasure.Size = new System.Drawing.Size(138, 50);
+            this.btnStopMeasure.TabIndex = 40;
+            this.btnStopMeasure.Text = "Остановить измерения";
+            this.btnStopMeasure.UseVisualStyleBackColor = true;
+            this.btnStopMeasure.Click += new System.EventHandler(this.btnStopMeasure_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(149, 178);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 13);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "Треб. значение";
+            // 
+            // textBoxSetRegValue
+            // 
+            this.textBoxSetRegValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSetRegValue.Location = new System.Drawing.Point(145, 193);
+            this.textBoxSetRegValue.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSetRegValue.Name = "textBoxSetRegValue";
+            this.textBoxSetRegValue.Size = new System.Drawing.Size(89, 21);
+            this.textBoxSetRegValue.TabIndex = 41;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 178);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 13);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Тек. значение";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 99);
+            this.label2.Location = new System.Drawing.Point(47, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 17);
+            this.label2.Size = new System.Drawing.Size(152, 13);
             this.label2.TabIndex = 39;
             this.label2.Text = "Выбор выводимого графика";
             // 
             // comboBoxSeries
             // 
             this.comboBoxSeries.FormattingEnabled = true;
-            this.comboBoxSeries.Location = new System.Drawing.Point(68, 119);
+            this.comboBoxSeries.Location = new System.Drawing.Point(57, 84);
+            this.comboBoxSeries.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSeries.Name = "comboBoxSeries";
-            this.comboBoxSeries.Size = new System.Drawing.Size(117, 24);
+            this.comboBoxSeries.Size = new System.Drawing.Size(138, 21);
             this.comboBoxSeries.TabIndex = 38;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 159);
+            this.label3.Location = new System.Drawing.Point(63, 134);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 17);
+            this.label3.Size = new System.Drawing.Size(126, 13);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Настройка измерений";
+            this.label3.Text = "Настройка параметров";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 21);
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.Location = new System.Drawing.Point(57, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 62);
+            this.button1.Size = new System.Drawing.Size(138, 50);
             this.button1.TabIndex = 33;
             this.button1.Text = "Начать измерения";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnStartMeasure_Click);
             // 
-            // textBox1
+            // textBoxGetRegValue
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(68, 209);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 24);
-            this.textBox1.TabIndex = 22;
+            this.textBoxGetRegValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxGetRegValue.Location = new System.Drawing.Point(20, 193);
+            this.textBoxGetRegValue.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGetRegValue.Name = "textBoxGetRegValue";
+            this.textBoxGetRegValue.Size = new System.Drawing.Size(89, 21);
+            this.textBoxGetRegValue.TabIndex = 22;
             // 
-            // comboBox2
+            // comboBoxRegs
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(34, 179);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(184, 24);
-            this.comboBox2.TabIndex = 23;
+            this.comboBoxRegs.FormattingEnabled = true;
+            this.comboBoxRegs.Location = new System.Drawing.Point(57, 149);
+            this.comboBoxRegs.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxRegs.Name = "comboBoxRegs";
+            this.comboBoxRegs.Size = new System.Drawing.Size(138, 21);
+            this.comboBoxRegs.TabIndex = 23;
+            this.comboBoxRegs.SelectedIndexChanged += new System.EventHandler(this.comboBoxRegs_SelectedIndexChanged);
             // 
-            // button5
+            // btnAcceptRegChanges
             // 
-            this.button5.Location = new System.Drawing.Point(34, 239);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(184, 52);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "Принять изменения";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnAcceptRegChanges.Location = new System.Drawing.Point(57, 218);
+            this.btnAcceptRegChanges.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAcceptRegChanges.Name = "btnAcceptRegChanges";
+            this.btnAcceptRegChanges.Size = new System.Drawing.Size(138, 42);
+            this.btnAcceptRegChanges.TabIndex = 25;
+            this.btnAcceptRegChanges.Text = "Принять изменения";
+            this.btnAcceptRegChanges.UseVisualStyleBackColor = true;
+            this.btnAcceptRegChanges.Click += new System.EventHandler(this.btnAcceptRegChanges_Click);
             // 
             // chartITEC
             // 
+            this.chartITEC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.chartITEC.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartITEC.Legends.Add(legend1);
-            this.chartITEC.Location = new System.Drawing.Point(284, 6);
+            this.chartITEC.Location = new System.Drawing.Point(258, 22);
+            this.chartITEC.Margin = new System.Windows.Forms.Padding(2);
             this.chartITEC.Name = "chartITEC";
             series1.BackImageTransparentColor = System.Drawing.Color.Transparent;
             series1.ChartArea = "ChartArea1";
@@ -739,37 +827,52 @@ namespace WindowsFormsApp2
             this.chartITEC.Series.Add(series4);
             this.chartITEC.Series.Add(series5);
             this.chartITEC.Series.Add(series6);
-            this.chartITEC.Size = new System.Drawing.Size(1044, 442);
+            this.chartITEC.Size = new System.Drawing.Size(1156, 533);
             this.chartITEC.TabIndex = 27;
             this.chartITEC.Text = "chartITEC";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(281, 45);
-            this.label1.MinimumSize = new System.Drawing.Size(150, 0);
+            this.label1.Location = new System.Drawing.Point(211, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.MinimumSize = new System.Drawing.Size(112, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 17);
+            this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 15;
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-2, -3);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(-2, -2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1500, 800);
+            this.tabControl1.Size = new System.Drawing.Size(1448, 592);
             this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1440, 566);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 503);
+            this.ClientSize = new System.Drawing.Size(1436, 589);
             this.Controls.Add(this.tabControl1);
-            this.MaximumSize = new System.Drawing.Size(1500, 550);
-            this.MinimumSize = new System.Drawing.Size(1500, 550);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1452, 628);
             this.Name = "Form1";
             this.Text = "Device Control";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -792,6 +895,7 @@ namespace WindowsFormsApp2
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -807,27 +911,26 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RichTextBox txtВходящиеДанные;
+        private System.Windows.Forms.RichTextBox txtInputData;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Label lblОбъёмВхДанных;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.CheckBox chBoxДобавлятьНовыеДанные;
-        private System.Windows.Forms.CheckBox chBoxОбновлятьВсегда;
+        private System.Windows.Forms.CheckBox chBoxAddNewData;
+        private System.Windows.Forms.CheckBox chBoxAlwaysUpdate;
         private System.Windows.Forms.Button btnОчиститьОкноВывода;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label lblОбъёмИсхДанных;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox chBoxWrite;
         private System.Windows.Forms.CheckBox chBoxWriteLine;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.CheckBox chBoxИспользEnter;
         private System.Windows.Forms.Button btnОтправитьДанные;
         private System.Windows.Forms.Button btnОчиститьОкноВвода;
-        private System.Windows.Forms.TextBox txtBoxВводДанных;
+        private System.Windows.Forms.TextBox txtBoxInputData;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chBoxRTS;
         private System.Windows.Forms.CheckBox chBoxDTR;
@@ -841,10 +944,10 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ComboBox comboBoxBaud;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartITEC;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAcceptRegChanges;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxRegs;
+        private System.Windows.Forms.TextBox textBoxGetRegValue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button button1;
@@ -853,12 +956,18 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ComboBox comboBoxCOM;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label lblСтатусПорта;
-        private System.Windows.Forms.ProgressBar progrОткрытие;
-        private System.Windows.Forms.Button btnЗакрытьПорт;
-        private System.Windows.Forms.Button btnОткрытьПорт;
+        private System.Windows.Forms.Label lblPortStatus;
+        private System.Windows.Forms.ProgressBar progrOpening;
+        private System.Windows.Forms.Button btnClosePort;
+        private System.Windows.Forms.Button btnOpenPort;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxSeries;
+        private System.Windows.Forms.Button btnStopMeasure;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBoxSetRegValue;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btnSaveIntoExcel;
     }
 }
 

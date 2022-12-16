@@ -8,7 +8,8 @@ using System.Drawing;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.Text;
+using Excel = Microsoft.Office.Interop.Excel;
 namespace WindowsFormsApp2
 {
 
@@ -17,57 +18,17 @@ namespace WindowsFormsApp2
         bool expectationChart;
         private string dataOUT, sendWidth, dataIn;
         public double[,] data;
-        public List<string> graphY = new List<string>();
+        public List<string> graph = new List<string>();
         public List<string> regList = new List<string>();
         int limitTemp = 35;
         int chartPosX = 0, chartPosY = 0, chartWidth=0,chartHeight=0;
         public Form1()
         {
             InitializeComponent();
-            ClientSize = new Size(1125, 550);
             StartPosition = FormStartPosition.CenterScreen;
-            
-/*            //Красивое движение графиков (Выбор и развертка косая)
-
-            chart5.Click+= async (s, a) =>
-                {
-                    while (!expectationChart && chart5.Location.X > 5 && chart5.Location.Y>5)
-                    {
-
-                        if (chartPosX == 0 && chartPosY == 0)
-                        {
-                            chartPosX = chart5.Location.X;
-                            chartPosY = chart5.Location.Y;
-
-                        }
-                        await Task.Delay(1);
-                        expectationChart = true;
-                        chart5.Location = new Point(chart5.Location.X - chart5.Location.X/20-1, chart5.Location.Y - chart5.Location.Y / 10 - 1);
-                        
-                        expectationChart = false;
-                        
-                    }
-                    chart5.BringToFront();
-                    chart5.Size = new Size(Width = 850, Height = 380);
-                };
-            chart5.DoubleClick += async (s, a) =>
-                {
-                    chart5.Size = new Size(Width = 200, Height = 100);
-                    while (!expectationChart && chart5.Location.X <= chartPosX&& chart5.Location.Y <= chartPosY)
-                    {
-                        expectationChart = true;
-                        await Task.Delay(1);
-                        chart5.Location = new Point(chart5.Location.X+(chartPosX- chart5.Location.X)/10+1, chart5.Location.Y + (chartPosY - chart5.Location.Y) / 10 + 1);
-                        expectationChart = false;
-                    }
-
-                    
-                };
-            //конец*/
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-           ClientSize = new Size(1125, 550);
             KeyPreview = true;
 
             comboBoxSeries.Items.Add("I(TEC)");
@@ -81,9 +42,9 @@ namespace WindowsFormsApp2
             GetRegs(regList);
             foreach (string reg in regList)
             {
-                comboBox2.Items.Add(reg);
+                comboBoxRegs.Items.Add(reg);
             }
-            comboBox2.Items.Add(regList);
+            comboBoxRegs.Items.Add(regList);
 
             GetRegValue(regList);//значения регистров
 
@@ -92,8 +53,8 @@ namespace WindowsFormsApp2
             string[] ports = SerialPort.GetPortNames();
             comboBoxCOM.Items.AddRange(ports);
 
-            btnОткрытьПорт.Enabled = true;
-            btnЗакрытьПорт.Enabled = false;
+            btnOpenPort.Enabled = true;
+            btnClosePort.Enabled = false;
 
             chBoxDTR.Checked = false;
             serialPort1.DtrEnable = false;
@@ -101,12 +62,13 @@ namespace WindowsFormsApp2
             chBoxRTS.Checked = false;
             serialPort1.RtsEnable = false;
             btnОтправитьДанные.Enabled = true;
-            chBoxWrite.Checked = true;
-            chBoxWriteLine.Checked = false;
+            chBoxWriteLine.Checked = true;
             sendWidth = "Write";
 
-            chBoxОбновлятьВсегда.Checked = false;
-            chBoxДобавлятьНовыеДанные.Checked = true;
+            chBoxAlwaysUpdate.Checked = false;
+            chBoxAddNewData.Checked = true;
+
+
 
             timer.Enabled = false;
             chartITEC.ChartAreas[0].AxisX.Title = "Time, s";
@@ -121,7 +83,7 @@ namespace WindowsFormsApp2
             
         }
         //СТраница терминала
-        private void btnОткрытьПорт_Click(object sender, EventArgs e)
+        private void btnOpenPort_Click(object sender, EventArgs e)
         {
             try
             {
@@ -131,52 +93,50 @@ namespace WindowsFormsApp2
                 serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), comboBoxStopBits.Text);
                 serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), comboBoxParityBits.Text);
                 serialPort1.Open();
-                progrОткрытие.Value = 100;
-                btnОткрытьПорт.Enabled = false;
-                btnЗакрытьПорт.Enabled = true;
-                lblСтатусПорта.Text = "ON";
+                progrOpening.Value = 100;
+                btnOpenPort.Enabled = false;
+                btnClosePort.Enabled = true;
+                lblPortStatus.Text = "ON";
 
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnОткрытьПорт.Enabled = true;
-                btnЗакрытьПорт.Enabled = false;
-                lblСтатусПорта.Text = "OFF";
+                btnOpenPort.Enabled = true;
+                btnClosePort.Enabled = false;
+                lblPortStatus.Text = "OFF";
             }
         }
 
-        private void btnЗакрытьПорт_Click(object sender, EventArgs e)
+        private void btnClosePort_Click(object sender, EventArgs e)
         {
             if (serialPort1.IsOpen)
             {
                 serialPort1.Close();
-                progrОткрытие.Value = 0;
-                btnОткрытьПорт.Enabled = true;
-                btnЗакрытьПорт.Enabled = false;
-                lblСтатусПорта.Text = "OFF";
+                progrOpening.Value = 0;
+                btnOpenPort.Enabled = true;
+                btnClosePort.Enabled = false;
+                lblPortStatus.Text = "OFF";
             }
         }
-
-        private void btnОтправитьДанные_Click(object sender, EventArgs e)
+        private void btnSendData_Click(object sender, EventArgs e)
         {
-            
+
             if (serialPort1.IsOpen)
             {
-                dataOUT = txtBoxВводДанных.Text;
+                dataOUT = txtBoxInputData.Text;
+
                 if (sendWidth == "WriteLine")
                 {
-                    serialPort1.WriteLine(dataOUT);
-                }
-                else if (sendWidth == "Write")
-                {
-                    serialPort1.Write(dataOUT);
+                    dataOUT += "\r";
                 }
                 
-                
+                var buffer = Encoding.ASCII.GetBytes(dataOUT);
+                serialPort1.Write(buffer, 0, buffer.Length);
+
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStartMeasure_Click(object sender, EventArgs e)
         {
 
             if (comboBoxSeries.SelectedIndex > -1)
@@ -184,8 +144,8 @@ namespace WindowsFormsApp2
                 timer.Enabled = true;
                 try
                 {
-                    dataOUT = "mon \r\n";
-                    serialPort1.WriteLine(dataOUT);
+                    dataOUT = "mon\r";
+                    serialPort1.Write(dataOUT);
 
 
                 }
@@ -221,9 +181,9 @@ namespace WindowsFormsApp2
 
         private void btnОчиститьОкноВвода_Click(object sender, EventArgs e)
         {
-            if (txtBoxВводДанных.Text != "")
+            if (txtBoxInputData.Text != "")
             {
-                txtBoxВводДанных.Text = "";
+                txtBoxInputData.Text = "";
             }
         }
 
@@ -235,7 +195,7 @@ namespace WindowsFormsApp2
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    dataOUT = txtBoxВводДанных.Text;
+                    dataOUT = txtBoxInputData.Text;
                     if (sendWidth == "Write")
                     {
                         serialPort1.WriteLine(dataOUT);
@@ -248,25 +208,6 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void chBoxWriteLine_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chBoxWriteLine.Checked)
-            {
-                sendWidth = "WriteLine";
-                chBoxWrite.Checked = false;
-                chBoxWriteLine.Checked = true;
-            }
-        }
-
-        private void chBoxWrite_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chBoxWrite.Checked)
-            {
-                sendWidth = "Write";
-                chBoxWrite.Checked = true;
-                chBoxWriteLine.Checked = false;
-            }
-        }
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
@@ -275,9 +216,9 @@ namespace WindowsFormsApp2
                 dataIn = serialPort1.ReadLine();
                 this.Invoke(new EventHandler(ShowData));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
                 
             }
            
@@ -295,47 +236,59 @@ namespace WindowsFormsApp2
             
             lblОбъёмВхДанных.Text = string.Format("{0:00}", dataINLength);
 
-            if (chBoxОбновлятьВсегда.Checked)
+            if (chBoxAlwaysUpdate.Checked)
             {
-                txtВходящиеДанные.Text = dataIn;
-                File.WriteAllText(@"C:\Files\TERMINAL.txt", txtВходящиеДанные.Text);
+                txtInputData.Text = dataIn;
+                File.WriteAllText(@"D:\repos\TERMINAL.txt", txtInputData.Text);
             }
-            else if (chBoxДобавлятьНовыеДанные.Checked)
+            else if (chBoxAddNewData.Checked)
             {
-                txtВходящиеДанные.Text += dataIn;
-                File.WriteAllText(@"C:\Files\TERMINAL.txt", txtВходящиеДанные.Text);
+                txtInputData.Text += dataIn;
+                File.WriteAllText(@"D:\repos\TERMINAL.txt", txtInputData.Text);
             }
             dataIn = dataIn.Replace(',', ' ');
             dataIn = dataIn.Replace('.', ',');
             
-                graphY.Add(dataIn);
-            graphY.RemoveAll(s => s == "");
-            if (graphY.Count != 0)
+                graph.Add(dataIn);
+            graph.RemoveAll(s => s == "");
+
+            if (graph.Count != 0)
             {
-                if (graphY[graphY.Count - 1].Contains("asecm> mon") 
-                    || graphY[graphY.Count - 1].Contains("mon") 
-                    || graphY[graphY.Count - 1].Contains("asecm>"))
+                if (graph[graph.Count - 1].Contains("asecm> mon") 
+                    || graph[graph.Count - 1].Contains("mon") 
+                    || graph[graph.Count - 1].Contains("asecm>"))
                 {
-                    graphY.Remove(graphY[graphY.Count - 1]);
+                    graph.Remove(graph[graph.Count - 1]);
                 }
             }
 
-            if (graphY.Count != 0&&graphY[graphY.Count - 1].Any(c => char.IsLetter(c)))
+            if (graph.Count != 0&&graph[graph.Count - 1].Any(c => char.IsLetter(c)))
                 {
-                    graphY.Remove(graphY[graphY.Count - 1]);
+                    graph.Remove(graph[graph.Count - 1]);
                 }
-                if (graphY.Count != 0&&graphY[graphY.Count - 1].Contains('/'))
+                if (graph.Count != 0&&graph[graph.Count - 1].Contains('/'))
                 {
-                    graphY[graphY.Count - 1] = graphY[graphY.Count - 1]
-                        .Remove(graphY[graphY.Count - 1].Length - 2);
+                    graph[graph.Count - 1] = graph[graph.Count - 1]
+                        .Remove(graph[graph.Count - 1].Length - 2);
                 }
-            if (graphY.Count != 0)
+            if (graph.Count != 0)
             {
                 for (int j = 0; j < 6; j++)
                 {
-                    string[] arr = graphY[graphY.Count - 1].Split(' ');
-                    if (arr.Length > 2)
-                        masZnach[j] = double.Parse(arr[j]);
+                    string[] arr = graph[graph.Count - 1].Split(' ');
+                    try
+                    {
+                        if (arr.Length > 2)
+                            masZnach[j] = double.Parse(arr[j]);
+                    }
+                    catch (Exception ex) {
+                        foreach (var item in masZnach)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
 
@@ -345,7 +298,6 @@ namespace WindowsFormsApp2
             PACE.Add(masZnach[3]);
             THERM.Add(masZnach[4]);
             LAMBDA.Add(masZnach[5]);
-
         }
 
         int countSeconds=0;
@@ -380,34 +332,114 @@ namespace WindowsFormsApp2
         }
 
 
-        private void chBoxОбновлятьВсегда_CheckedChanged(object sender, EventArgs e)//alw update
+        private void btnStopMeasure_Click(object sender, EventArgs e)
         {
-            if (chBoxОбновлятьВсегда.Checked)
-            {
-                chBoxОбновлятьВсегда.Checked = true;
-                chBoxДобавлятьНовыеДанные.Checked = false;
-            }
-            else { chBoxДобавлятьНовыеДанные.Checked = true; }
+                timer.Enabled = false;
+                try
+                {
+                    dataOUT = "/"+"\r";
+                    serialPort1.Write(dataOUT);
+
+
+                }
+                catch (Exception err)
+                {
+
+                    MessageBox.Show(err.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
         }
 
-        private void chBoxДобавлятьНовыеДанные_CheckedChanged(object sender, EventArgs e)
+        private void comboBoxRegs_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (chBoxДобавлятьНовыеДанные.Checked)
-            {
-                chBoxОбновлятьВсегда.Checked = false;
-                chBoxДобавлятьНовыеДанные.Checked = true;
-            }
-            else { chBoxОбновлятьВсегда.Checked = true; }
+            List <string> regs = new List<string>();
+            GetRegs(regs);
+            List <string> regValue = new List<string>();
+            GetRegValue(regValue);
+            int index = regs.IndexOf(comboBoxRegs.SelectedItem.ToString());
+            textBoxGetRegValue.Text = regValue[index];
         }
 
-        private void btnОчиститьОкноВывода_Click(object sender, EventArgs e)
+        private void btnAcceptRegChanges_Click(object sender, EventArgs e)
         {
-            if (txtВходящиеДанные.Text != "")
+            List<string> regs = new List<string>();
+            GetRegs(regs);
+            List<string> regValue = new List<string>();
+            GetRegValue(regValue);
+            int index = regs.IndexOf(comboBoxRegs.SelectedItem.ToString());
+            dataIn =textBoxSetRegValue.Text;
+
+            serialPort1.Write("reg" + index.ToString() + "=" + dataIn + "\r");
+            regValue[regs.IndexOf(comboBoxRegs.SelectedItem.ToString())]= dataIn;
+            StreamWriter writer = new StreamWriter("D:\\repos\\Device_Control1.1\\RegValues.txt");
+            for (int i = 0;regValue.Count> i; i++)
             {
-                txtВходящиеДанные.Text = "";
+                writer.WriteLine(regValue[i].ToString());
             }
-            File.Delete(@"C:\Files\TERMINAL.txt");
+            writer.Close();
+
+
+        }
+
+        private void btnSaveIntoExcel_Click(object sender, EventArgs e)
+        {
+            if (ITEC.Count != 0)
+            {
+                Excel.Application app = new Excel.Application
+                {
+                    //Отобразить Excel
+                    Visible = true,
+                    SheetsInNewWorkbook = 1
+                };
+                Excel.Workbook workBook = app.Workbooks.Add(Type.Missing);
+                Excel.Worksheet sheet = (Excel.Worksheet)app.Worksheets.get_Item(1);
+                sheet.Name = "DATA";
+
+                int j = 1; // счетчик столбиков в экселе
+
+                for (int i = 1; i < ITEC.Count; i++)
+                {
+                    sheet.Cells[i, 1] = String.Format(ITEC[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 2] = String.Format(ILD[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 3] = String.Format(PBFM[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 4] = String.Format(PACE[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 5] = String.Format(THERM[i - 1].ToString(), i, j);
+                    sheet.Cells[i, 6] = String.Format(LAMBDA[i - 1].ToString(), i, j);
+                }
+                    app.Application.ActiveWorkbook.SaveAs("D:\\repos\\Device_Control1.1\\DATA.xlsx", Type.Missing,
+  Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlNoChange,
+  Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                    app.Quit();
+            }
+        }
+
+        private void chBoxAlwaysUpdate_CheckedChanged(object sender, EventArgs e)//alw update
+        {
+            if (chBoxAlwaysUpdate.Checked)
+            {
+                chBoxAlwaysUpdate.Checked = true;
+                chBoxAddNewData.Checked = false;
+            }
+            else { chBoxAddNewData.Checked = true; }
+        }
+
+        private void chBoxAddNewData_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chBoxAddNewData.Checked)
+            {
+                chBoxAlwaysUpdate.Checked = false;
+                chBoxAddNewData.Checked = true;
+            }
+            else { chBoxAlwaysUpdate.Checked = true; }
+        }
+
+        private void btnClearOutWindow_Click(object sender, EventArgs e)
+        {
+            if (txtInputData.Text != "")
+            {
+                txtInputData.Text = "";
+            }
+            File.Delete(@"D:\repos\TERMINAL.txt");
 
 
         }
@@ -464,54 +496,14 @@ namespace WindowsFormsApp2
 
         private List<string> GetRegValue(List<string> regs)
         {
-            regs.Add("1");
-            regs.Add("3071");
-            regs.Add("10");
-            regs.Add("0");
-            regs.Add("20");
-            regs.Add("64");
-            regs.Add("35");
-            regs.Add("35");
-            regs.Add("0.03");
-            regs.Add("2");
-            regs.Add("1000");
-            regs.Add("500");
-            regs.Add("11.5");
-            regs.Add("9.5");
-            regs.Add("5.05");
-            regs.Add("10");
-            regs.Add("135");
-            regs.Add("0.001129");
-            regs.Add("0.000234");
-            regs.Add("0");
-            regs.Add("13500");
-            regs.Add("0.001030");
-            regs.Add("0.000238");
-            regs.Add("0");
-            regs.Add("10000");
-            regs.Add("0");
-            regs.Add("0");
-            regs.Add("0");
-            regs.Add("130");
-            regs.Add("0.001");
-            regs.Add("0.005");
-            regs.Add("0.001");
-            regs.Add("100");
-            regs.Add("0.05");
-            regs.Add("0.01");
-            regs.Add("0.05");
-            regs.Add("0.01");
-            regs.Add("1");
-            regs.Add("0.005");
-            regs.Add("0.005");
-            regs.Add("0.001");
-            regs.Add("0.001");
-            regs.Add("0.0001");
-            regs.Add("0.001");
-            regs.Add("0.005");
-            regs.Add("0.001");
+            StreamReader reader = new StreamReader("D:\\repos\\Device_Control1.1\\RegValues.txt");
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+               regs.Add(line);
+            }
 
-
+            reader.Close();
             return regs;
         }
 
