@@ -22,6 +22,7 @@ namespace WindowsFormsApp2
         public List<string> regList = new List<string>();
         int limitTemp = 35;
         int chartPosX = 0, chartPosY = 0, chartWidth=0,chartHeight=0;
+        const string repos = "D:\\repos\\Device_Control1.1\\";
         public Form1()
         {
             InitializeComponent();
@@ -239,12 +240,12 @@ namespace WindowsFormsApp2
             if (chBoxAlwaysUpdate.Checked)
             {
                 txtInputData.Text = dataIn;
-                File.WriteAllText(@"D:\repos\TERMINAL.txt", txtInputData.Text);
+                File.WriteAllText(repos+"TERMINAL.txt", txtInputData.Text);
             }
             else if (chBoxAddNewData.Checked)
             {
                 txtInputData.Text += dataIn;
-                File.WriteAllText(@"D:\repos\TERMINAL.txt", txtInputData.Text);
+                File.WriteAllText(repos+"TERMINAL.txt", txtInputData.Text);
             }
             dataIn = dataIn.Replace(',', ' ');
             dataIn = dataIn.Replace('.', ',');
@@ -330,6 +331,14 @@ namespace WindowsFormsApp2
                 chartITEC.ChartAreas[0].AxisX.Interval = 2;
             }
         }
+        private void comboBoxSeries_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            countSeconds = 0;
+            chartITEC.ChartAreas[0].AxisX.Minimum = DateTime.Now.ToOADate();
+            chartITEC.ChartAreas[0].AxisX.Maximum = DateTime.Now.AddMinutes(1).ToOADate();
+            chartITEC.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Seconds;
+            chartITEC.ChartAreas[0].AxisX.Interval = 2;
+        }
 
 
         private void btnStopMeasure_Click(object sender, EventArgs e)
@@ -372,7 +381,7 @@ namespace WindowsFormsApp2
 
                 serialPort1.Write("reg" + index.ToString() + "=" + dataIn + "\r");
                 regValue[regs.IndexOf(comboBoxRegs.SelectedItem.ToString())] = dataIn;
-                StreamWriter writer = new StreamWriter("D:\\repos\\Device_Control1.1\\RegValues.txt");
+                StreamWriter writer = new StreamWriter(repos+"RegValues.txt");
                 for (int i = 0; regValue.Count > i; i++)
                 {
                     writer.WriteLine(regValue[i].ToString());
@@ -386,7 +395,7 @@ namespace WindowsFormsApp2
         private void btnSaveIntoExcel_Click(object sender, EventArgs e)
         {
             int fileNom = 1;
-            while (File.Exists("D:\\repos\\Device_Control1.1\\DATA" + fileNom.ToString() + ".xlsx"))
+            while (File.Exists(repos+"DATA" + fileNom.ToString() + ".xlsx"))
                 fileNom++;
             if (ITEC.Count != 0 && !saveIntoNewFile.Checked)
             {
@@ -396,7 +405,7 @@ namespace WindowsFormsApp2
                     Visible = true,
                     SheetsInNewWorkbook = 1
                 };
-                Excel.Workbook workBook = app.Workbooks.Open("D:\\repos\\Device_Control1.1\\DATA" + (fileNom-1).ToString() + ".xlsx");
+                Excel.Workbook workBook = app.Workbooks.Open(repos+"DATA" + (fileNom-1).ToString() + ".xlsx");
                 Excel.Worksheet sheet = (Excel.Worksheet)app.Worksheets.get_Item(1);
                 
 
@@ -438,7 +447,7 @@ namespace WindowsFormsApp2
                     sheet.Cells[i, 5] = String.Format(THERM[i - 1].ToString(), i, j);
                     sheet.Cells[i, 6] = String.Format(LAMBDA[i - 1].ToString(), i, j);
                 }
-                app.Application.ActiveWorkbook.SaveAs("D:\\repos\\Device_Control1.1\\DATA" + fileNom.ToString() + ".xlsx", Type.Missing,
+                app.Application.ActiveWorkbook.SaveAs(repos+"DATA" + fileNom.ToString() + ".xlsx", Type.Missing,
 Type.Missing, Type.Missing, Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlNoChange,
 Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                 app.Quit();
@@ -446,7 +455,6 @@ Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             }
 
         }
-
         private void chBoxAlwaysUpdate_CheckedChanged(object sender, EventArgs e)//alw update
         {
             if (chBoxAlwaysUpdate.Checked)
@@ -531,7 +539,7 @@ Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
 
         private List<string> GetRegValue(List<string> regs)
         {
-            StreamReader reader = new StreamReader("D:\\repos\\Device_Control1.1\\RegValues.txt");
+            StreamReader reader = new StreamReader(repos+"RegValues.txt");
             string line;
             while ((line = reader.ReadLine()) != null)
             {

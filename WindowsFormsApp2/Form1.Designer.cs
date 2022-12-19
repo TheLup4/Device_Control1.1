@@ -83,6 +83,7 @@ namespace WindowsFormsApp2
             this.btnClosePort = new System.Windows.Forms.Button();
             this.btnOpenPort = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.saveIntoNewFile = new System.Windows.Forms.CheckBox();
             this.btnSaveIntoExcel = new System.Windows.Forms.Button();
             this.btnStopMeasure = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -99,7 +100,6 @@ namespace WindowsFormsApp2
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.saveIntoNewFile = new System.Windows.Forms.CheckBox();
             this.tabPage2.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -152,7 +152,7 @@ namespace WindowsFormsApp2
             this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox9.Size = new System.Drawing.Size(524, 445);
+            this.groupBox9.Size = new System.Drawing.Size(372, 344);
             this.groupBox9.TabIndex = 18;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Receiver Control";
@@ -162,7 +162,7 @@ namespace WindowsFormsApp2
             this.txtInputData.Location = new System.Drawing.Point(4, 15);
             this.txtInputData.Margin = new System.Windows.Forms.Padding(2);
             this.txtInputData.Name = "txtInputData";
-            this.txtInputData.Size = new System.Drawing.Size(516, 226);
+            this.txtInputData.Size = new System.Drawing.Size(363, 126);
             this.txtInputData.TabIndex = 17;
             this.txtInputData.Text = "";
             // 
@@ -171,11 +171,11 @@ namespace WindowsFormsApp2
             this.groupBox10.Controls.Add(this.groupBox11);
             this.groupBox10.Controls.Add(this.groupBox13);
             this.groupBox10.Controls.Add(this.btnОчиститьОкноВывода);
-            this.groupBox10.Location = new System.Drawing.Point(72, 244);
+            this.groupBox10.Location = new System.Drawing.Point(4, 147);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox10.Size = new System.Drawing.Size(386, 197);
+            this.groupBox10.Size = new System.Drawing.Size(363, 192);
             this.groupBox10.TabIndex = 15;
             this.groupBox10.TabStop = false;
             // 
@@ -183,11 +183,11 @@ namespace WindowsFormsApp2
             // 
             this.groupBox11.Controls.Add(this.lblОбъёмВхДанных);
             this.groupBox11.Controls.Add(this.label10);
-            this.groupBox11.Location = new System.Drawing.Point(29, 116);
+            this.groupBox11.Location = new System.Drawing.Point(27, 119);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox11.Size = new System.Drawing.Size(350, 61);
+            this.groupBox11.Size = new System.Drawing.Size(309, 58);
             this.groupBox11.TabIndex = 16;
             this.groupBox11.TabStop = false;
             // 
@@ -206,7 +206,7 @@ namespace WindowsFormsApp2
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(90, 24);
+            this.label10.Location = new System.Drawing.Point(83, 24);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(124, 17);
@@ -663,6 +663,16 @@ namespace WindowsFormsApp2
             this.groupBox6.TabIndex = 34;
             this.groupBox6.TabStop = false;
             // 
+            // saveIntoNewFile
+            // 
+            this.saveIntoNewFile.AutoSize = true;
+            this.saveIntoNewFile.Location = new System.Drawing.Point(125, 280);
+            this.saveIntoNewFile.Name = "saveIntoNewFile";
+            this.saveIntoNewFile.Size = new System.Drawing.Size(126, 17);
+            this.saveIntoNewFile.TabIndex = 44;
+            this.saveIntoNewFile.Text = "Сохранять в новый ";
+            this.saveIntoNewFile.UseVisualStyleBackColor = true;
+            // 
             // btnSaveIntoExcel
             // 
             this.btnSaveIntoExcel.Location = new System.Drawing.Point(10, 271);
@@ -733,6 +743,7 @@ namespace WindowsFormsApp2
             this.comboBoxSeries.Name = "comboBoxSeries";
             this.comboBoxSeries.Size = new System.Drawing.Size(138, 21);
             this.comboBoxSeries.TabIndex = 38;
+            this.comboBoxSeries.SelectedIndexChanged += new System.EventHandler(this.comboBoxSeries_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -799,26 +810,33 @@ namespace WindowsFormsApp2
             this.chartITEC.Margin = new System.Windows.Forms.Padding(2);
             this.chartITEC.Name = "chartITEC";
             series1.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.LabelBorderWidth = 2;
             series1.Legend = "Legend1";
             series1.Name = "I(TEC)";
+            series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Legend = "Legend1";
             series2.Name = "I(LD)";
+            series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series3.Legend = "Legend1";
             series3.Name = "P(BFM)";
+            series4.BorderWidth = 2;
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Legend = "Legend1";
             series4.Name = "P(ACE)";
+            series5.BorderWidth = 2;
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series5.Legend = "Legend1";
             series5.Name = "THERM";
+            series6.BorderWidth = 2;
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series6.Legend = "Legend1";
@@ -866,16 +884,6 @@ namespace WindowsFormsApp2
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // saveIntoNewFile
-            // 
-            this.saveIntoNewFile.AutoSize = true;
-            this.saveIntoNewFile.Location = new System.Drawing.Point(125, 280);
-            this.saveIntoNewFile.Name = "saveIntoNewFile";
-            this.saveIntoNewFile.Size = new System.Drawing.Size(126, 17);
-            this.saveIntoNewFile.TabIndex = 44;
-            this.saveIntoNewFile.Text = "Сохранять в новый ";
-            this.saveIntoNewFile.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
