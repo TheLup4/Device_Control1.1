@@ -455,6 +455,9 @@ Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             }
 
         }
+
+
+
         private void chBoxAlwaysUpdate_CheckedChanged(object sender, EventArgs e)//alw update
         {
             if (chBoxAlwaysUpdate.Checked)
